@@ -7,7 +7,7 @@ The repository documents engineering standards and will eventually distribute .N
 1. Reference a GitHub issue describing the problem, proposed outcome, and acceptance criteria. One issue should ordinarily have one pull request.
 2. Branch from current `main` using `issue/<number>-<short-description>`; do not commit directly to `main`.
 3. Identify the authoritative document or template being changed. Preserve existing decisions and explain proposed exceptions explicitly.
-4. For executable behavior, start with a meaningful failing test, implement the smallest solution, and refactor. Documentation-only work should explain why a behavioral red test does not apply.
+4. For executable behavior, start with a meaningful failing test, implement the smallest solution, and refactor. Documentation-only edits do not need a behavioral test or a TDD exception.
 5. Perform verification appropriate to the change, then open one PR using the [pull request template](.github/pull_request_template.md). Include applicable commands, actual results or manual review, exact SHA, and limitations; provide environment versions and CI links when applicable.
 6. Obtain an explicit second-pass owner review. A merge, tag, release, or package publication requires its own authorization; a green CI run grants none of these permissions.
 

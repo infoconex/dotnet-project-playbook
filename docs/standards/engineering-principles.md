@@ -5,14 +5,14 @@ This is the authoritative baseline for engineering principles applied to project
 | Principle | Level | Application |
 | --- | --- | --- |
 | SOLID | Required | Design maintainable responsibilities, substitutions, interfaces, and dependency boundaries appropriate to the code. |
-| Test-driven development | Required default practice | For new behavior and defect fixes, write a meaningful failing test, implement minimally, then refactor. Explain a justified verification-only or documentation exception. |
+| Test-driven development | Required | For new executable behavior and defect fixes, write a meaningful failing test, implement minimally, then refactor. Explain justified exceptions when behavioral TDD is applicable. Documentation-only edits do not require a behavioral test or an exception. |
 | Dependency direction | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
-| Automated verification | Required where practical | Check important behavior and applicable structural constraints with locally reproducible evidence. Document gaps. |
-| CI/local parity | Recommended implementation pattern | Keep underlying validation in repository-controlled scripts; let CI provision tools, select environments, and publish results. |
-| Hexagonal (Ports and Adapters) architecture | Preferred | Define ports where they are consumed, keep adapters outside business logic, and use the pattern where it clarifies real dependencies. |
-| Separate compiled projects | Conditional | Separate Domain, Application, Infrastructure, and presentation when responsibility and dependency boundaries justify the additional projects. |
+| Automated verification | Required | For meaningful executable behavior, check important outcomes and applicable structural constraints with locally reproducible evidence where practical. Document gaps; documentation-only review does not require an artificial automated check. |
+| CI/local parity | Recommended | When CI is introduced, keep underlying validation in repository-controlled scripts; let CI provision tools, select environments, and publish results. |
+| Hexagonal (Ports and Adapters) architecture | Recommended | When external adapters or meaningful dependency boundaries exist, define ports where they are consumed, keep adapters outside business logic, and use the pattern where it clarifies real dependencies. |
+| Separate compiled projects | Optional | Separate Domain, Application, Infrastructure, and presentation into compiled projects when responsibility and dependency boundaries justify the additional projects. |
 | Evidence-based claims | Required | Distinguish designed, implemented, and observed/verified behavior. Record exact revisions and real test results. |
-| Research-first technical decisions | Required when external technical behavior matters | Consult applicable authoritative guidance before inventing a solution or discovery experiment; verify its applicability to the actual project. |
+| Research-first technical decisions | Required | When decisions depend on external platform, framework, or tooling behavior, consult applicable authoritative guidance before inventing a solution or discovery experiment; verify its applicability to the actual project. |
 
 ## Architectural interpretation
 

@@ -2,6 +2,8 @@
 
 An engineering playbook for creating and maintaining dependable .NET repositories. It will combine documented standards, reusable project templates, and automated verification so a newly generated repository starts with coherent development and delivery practices.
 
+It is intended for maintainers creating .NET class libraries, CLI tools, web APIs, workers, and related repositories; these project profiles are planned, not yet available as installable templates.
+
 ## Current state
 
 **Engineering foundation established.** This repository provides its governing principles, contribution workflow, and planned template architecture. No automated documentation validator, installable .NET project templates, or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) establishes the foundation; subsequent issues will deliver executable templates and their acceptance tests.

@@ -6,7 +6,7 @@ Explain the smallest engineering outcome this PR delivers. One issue should ordi
 
 ## Verification and evidence
 
-- [ ] Tests were written first for executable behavior, or a documentation/verification-only exception is explained.
+- [ ] Tests were written first for applicable executable behavior, or a justified exception is explained; documentation-only edits need no behavioral test.
 - [ ] Applicable verification commands and results, or documentation review performed, are recorded below.
 - [ ] Tool and operating system versions are recorded when relevant.
 - [ ] CI run links and conclusions are recorded if CI applies; the exact candidate SHA is always recorded.
