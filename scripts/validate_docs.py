@@ -35,11 +35,13 @@ REQUIRED_FILES = (
     "docs/decisions/0001-playbook-boundaries.md",
     "examples/dotnet-binary-tools.md",
 )
-INLINE_LINK = re.compile(r"!?\[[^\]\n]*\]\((<[^>]+>|[^)\n]+)\)")
-REFERENCE_LINK = re.compile(r"^\s{0,3}\[[^\]\n]+\]:\s*(<[^>]+>|\S+)")
+INLINE_LINK_START = re.compile(r"(?<!\\)!?\[[^\]\n]*\]\(")
+REFERENCE_LINK = re.compile(r"^\s{0,3}\[([^\]\n]+)\]:\s*(<[^>]+>|\S+)")
+REFERENCE_USAGE = re.compile(r"(?<!\\)!?\[([^\]\n]+)\]\[([^\]\n]*)\]")
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$")
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 INLINE_CODE = re.compile(r"(`+).*?\1")
+MARKDOWN_ESCAPES = re.compile(r"\\([\\`*_{}\[\]()#+\-.!])")
 
 
 def visible_markdown(source: str) -> list[tuple[int, str]]:
@@ -61,23 +63,113 @@ def visible_markdown(source: str) -> list[tuple[int, str]]:
     return visible
 
 
+def unescape_markdown(value: str) -> str:
+    """Decode backslash escapes allowed in Markdown link destinations."""
+    return MARKDOWN_ESCAPES.sub(r"\1", value)
+
+
+def inline_destination(line: str, start: int) -> str | None:
+    """Read one link destination, allowing balanced and escaped parentheses.
+
+    This is a focused link scanner, not a complete GitHub Flavored Markdown parser.
+    """
+    cursor = start
+    while cursor < len(line) and line[cursor] in " \t":
+        cursor += 1
+
+    if cursor < len(line) and line[cursor] == "<":
+        cursor += 1
+        destination_start = cursor
+        while cursor < len(line):
+            if line[cursor] == "\\" and cursor + 1 < len(line):
+                cursor += 2
+            elif line[cursor] == ">":
+                break
+            else:
+                cursor += 1
+        if cursor == len(line):
+            return None
+        destination = line[destination_start:cursor]
+        cursor += 1
+    else:
+        destination_start = cursor
+        depth = 0
+        while cursor < len(line):
+            character = line[cursor]
+            if character == "\\" and cursor + 1 < len(line):
+                cursor += 2
+            elif character == "(":
+                depth += 1
+                cursor += 1
+            elif character == ")":
+                if depth == 0:
+                    break
+                depth -= 1
+                cursor += 1
+            elif character.isspace() and depth == 0:
+                break
+            else:
+                cursor += 1
+        if depth:
+            return None
+        destination = line[destination_start:cursor]
+
+    # A link may end here or contain an optional title before the closing ')'.
+    if cursor < len(line) and line[cursor] == ")":
+        return unescape_markdown(destination)
+    if cursor >= len(line) or not line[cursor].isspace():
+        return None
+    remainder = line[cursor:].strip()
+    if remainder.startswith(")") or (
+        len(remainder) >= 3
+        and remainder[0] in ('"', "'")
+        and remainder[-1] == ")"
+        and remainder[-2] == remainder[0]
+    ):
+        return unescape_markdown(destination)
+    return None
+
+
 def markdown_links(source: str) -> list[tuple[int, str]]:
     """Collect inline destinations and reference-definition destinations."""
     links = []
     for line_number, line in visible_markdown(source):
-        for match in INLINE_LINK.finditer(line):
-            candidate = match.group(1).strip()
-            # Angle brackets permit URL-encoded or literal spaces in paths.
-            if candidate.startswith("<") and candidate.endswith(">"):
-                candidate = candidate[1:-1]
-            else:
-                candidate = candidate.split(maxsplit=1)[0]
-            links.append((line_number, candidate))
+        for match in INLINE_LINK_START.finditer(line):
+            destination = inline_destination(line, match.end())
+            if destination is not None:
+                links.append((line_number, destination))
         reference = REFERENCE_LINK.match(line)
         if reference:
-            candidate = reference.group(1).strip("<>")
-            links.append((line_number, candidate))
+            destination = reference.group(2).strip("<>")
+            links.append((line_number, unescape_markdown(destination)))
     return links
+
+
+def undefined_references(source: str) -> list[tuple[int, str]]:
+    """Find explicit full or collapsed references with no matching definition.
+
+    Bare shortcut references cannot be distinguished from ordinary bracketed text
+    when no definition exists, so they are intentionally not linted.
+    """
+    visible = visible_markdown(source)
+
+    def normalize(label: str) -> str:
+        return " ".join(label.split()).casefold()
+
+    definitions = {
+        normalize(match.group(1))
+        for _, line in visible
+        if (match := REFERENCE_LINK.match(line))
+    }
+    undefined = []
+    for line_number, line in visible:
+        if REFERENCE_LINK.match(line):
+            continue
+        for match in REFERENCE_USAGE.finditer(line):
+            label = match.group(2) or match.group(1)
+            if normalize(label) not in definitions:
+                undefined.append((line_number, label))
+    return undefined
 
 
 def heading_anchors(source: str) -> set[str]:
@@ -99,6 +191,8 @@ def heading_anchors(source: str) -> set[str]:
 def validate_markdown(path: Path, root: Path) -> tuple[list[str], int]:
     errors = []
     text = path.read_text(encoding="utf-8")
+    for line_number, label in undefined_references(text):
+        errors.append(f"{path.relative_to(root)}:{line_number}: undefined reference: {label}")
     links = markdown_links(text)
     for line_number, destination in links:
         try:
@@ -112,7 +206,7 @@ def validate_markdown(path: Path, root: Path) -> tuple[list[str], int]:
         if local_path.startswith("/"):
             errors.append(f"{path.relative_to(root)}:{line_number}: use repository-relative links: {destination}")
             continue
-        target = (path.parent / local_path).resolve()
+        target = (path.parent / local_path).resolve() if local_path else path.resolve()
         try:
             target.relative_to(root.resolve())
         except ValueError:
