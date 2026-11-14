@@ -8,7 +8,7 @@ The repository documents engineering standards and will eventually distribute .N
 2. Branch from current `main` using `issue/<number>-<short-description>`; do not commit directly to `main`.
 3. Identify the authoritative document or template being changed. Preserve existing decisions and explain proposed exceptions explicitly.
 4. For executable behavior, start with a meaningful failing test, implement the smallest solution, and refactor. Documentation-only work should explain why a behavioral red test does not apply.
-5. Run the checks relevant to the change locally, then open one PR using the [pull request template](.github/pull_request_template.md). Include actual commands, results, environment versions, exact SHA, CI links, and limitations.
+5. Perform verification appropriate to the change, then open one PR using the [pull request template](.github/pull_request_template.md). Include applicable commands, actual results or manual review, exact SHA, and limitations; provide environment versions and CI links when applicable.
 6. Obtain an explicit second-pass owner review. A merge, tag, release, or package publication requires its own authorization; a green CI run grants none of these permissions.
 
 For significant platform, framework, library, dependency, or tooling decisions, follow the [evidence-based technical decision standard](docs/standards/engineering-principles.md#evidence-based-technical-decisions). Consult applicable existing guidance before designing an experiment; record remaining uncertainty, project-specific verification, and justified deviations in the issue or PR. Routine changes do not require a separate research artifact.
@@ -19,16 +19,11 @@ Every normative standard identifies applicability and one of **Required**, **Rec
 
 Keep the canonical template source separate from illustrative examples. When generator functionality is added, test its output rather than assuming a template source tree proves that generated projects work.
 
-## Local validation
+## Verification
 
-Python 3 is the only validation dependency at this stage. From the repository root:
+The current foundation contains documentation and governance files, with no executable validator or CI workflow. Review proposed changes for accurate links, clear navigation, and consistency with the authoritative standards. Record what was reviewed and any limitations; do not report an unavailable check as passing.
 
-```shell
-python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
-python3 scripts/validate_docs.py
-```
-
-The first command tests the documentation validator; the second checks repository structure and local documentation links. Both should be invoked by the repository's CI wrapper. Record skipped or unavailable checks explicitly rather than reporting them as passes.
+When executable project templates or automation are introduced, add meaningful behavioral tests and locally reproducible verification. Where practical, CI should invoke the same repository-owned checks.
 
 ## Security
 

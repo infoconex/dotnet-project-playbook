@@ -12,7 +12,7 @@ Separate four concerns:
 
 - **Standards** define authoritative expectations and rationale, with explicit applicability levels.
 - **Templates** provide a single canonical implementation of reusable starting assets and project profiles.
-- **Validation** proves documented constraints and, eventually, generated project behavior using locally executable operations that CI orchestrates.
+- **Validation**, when introduced, will verify applicable constraints and generated project behavior using locally executable operations that CI can orchestrate.
 - **Examples** show real-world adoption while remaining project-specific and non-normative.
 
 Adopt the [engineering principles](../standards/engineering-principles.md): SOLID and test-first development as broad expectations, a preference for Ports and Adapters, and physical compiled boundaries only when real responsibilities justify them.

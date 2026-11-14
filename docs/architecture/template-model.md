@@ -8,10 +8,10 @@
 | --- | --- |
 | `docs/` | Normative standards, adoption policy, and decisions. |
 | `templates/` (future) | Canonical source for files delivered to generated repositories. |
-| `scripts/` | Reproducible validations and future template packaging. |
-| `tests/` | Unit tests for nontrivial automation and generated-output acceptance checks. |
+| `scripts/` (future) | Reproducible validations and template packaging; focused script tests can live alongside scripts under `scripts/tests/`. |
+| `tests/` (future) | Generated-output and integration acceptance checks. |
 | `examples/` | Real-world decisions and evidence, without a second competing copy of template assets. |
-| `.github/` | Governance and CI for the playbook itself, not the entire consumer template catalog. |
+| `.github/` | Governance for the playbook itself and, when justified, CI; not the entire consumer template catalog. |
 
 Create a directory only when it contains meaningful assets. Do not duplicate one canonical `.editorconfig`, build configuration, or CI script in multiple consumer templates unless a documented compatibility difference requires it.
 
@@ -30,4 +30,4 @@ Future tests should generate each supported profile with a non-default name, the
 
 Record template version and source revision in generated output. Document configuration choices that must be applied through GitHub settings, such as branch rulesets and secret scanning; copying a file alone does not activate those services.
 
-Do not infer that a future capability works from the existence of this design or from a successful documentation-validation workflow.
+Do not infer that a future capability works from the existence of this design or a review of documentation.

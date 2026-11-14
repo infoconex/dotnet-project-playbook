@@ -30,7 +30,7 @@ When a standard or its implementation depends on established platform or third-p
 
 - Standards own normative requirements and their applicability. Architecture Decision Records capture *why* significant choices were made, not a second mutable policy catalog.
 - Templates implement applicable standards; they are not independently authoritative when they disagree with an approved standard.
-- Scripts validate behavior. CI workflows orchestrate these scripts and record observed execution; skipped jobs are not passing evidence.
+- Once implemented, scripts should validate executable behavior and CI workflows should orchestrate the same checks and record observed execution; skipped jobs are not passing evidence. Documentation-only review is appropriate at this foundation stage.
 - Examples demonstrate how standards were applied in a particular project and are not themselves universal standards.
 - Track proposed work and completion in GitHub issues and pull requests. Do not repeat live completion status across directory README files.
 

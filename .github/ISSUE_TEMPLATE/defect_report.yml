@@ -1,5 +1,5 @@
 name: Defect report
-description: Report an error in playbook documentation, a template, or a validator.
+description: Report an error in playbook documentation, a template, or automation when available.
 title: "[Defect] "
 body:
   - type: markdown

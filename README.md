@@ -4,7 +4,7 @@ An engineering playbook for creating and maintaining dependable .NET repositorie
 
 ## Current state
 
-**Engineering foundation established.** This repository provides its governing principles, contribution workflow, foundational documentation validation, and planned template architecture. No installable .NET project templates or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) established the foundation; subsequent issues will deliver executable templates and their acceptance tests.
+**Engineering foundation established.** This repository provides its governing principles, contribution workflow, and planned template architecture. No automated documentation validator, installable .NET project templates, or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) establishes the foundation; subsequent issues will deliver executable templates and their acceptance tests.
 
 ## Navigate the playbook
 
@@ -30,13 +30,6 @@ Standards define requirements and rationale; templates provide reusable implemen
 
 [.NET Binary Tools](https://github.com/infoconex/dotnet-binary-tools) is the first reference for architecture boundaries, requirements traceability, CI evidence, and review governance. It is an **example**, not an installable starter and not a source of mandatory binary-inspection conventions.
 
-## Validate this repository
+## Current verification
 
-The initial documentation checks use Python 3 with no external packages. From the repository root:
-
-```shell
-python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
-python3 scripts/validate_docs.py
-```
-
-GitHub Actions invokes the same commands. These checks validate documentation structure and local links; they do **not** certify future .NET project templates.
+For this documentation-only foundation, review changes for accuracy, navigation, and consistency with the authoritative standards. Automated validation is deferred until there is executable template or automation behavior worth verifying. Future checks should run locally and through CI when applicable.

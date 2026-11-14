@@ -9,11 +9,11 @@ The playbook maintains standards, generated-starter source, executable verificat
 | `docs/architecture/` | Decisions about template composition and technical design. | Design available |
 | `docs/decisions/` | Sequential immutable ADR rationale and supersession history. | Available |
 | `templates/` | Canonical generated-project source, profile-specific content, and reusable assets. | Planned; not created |
-| `scripts/` | Directly executable validation and future packaging scripts. | Documentation validator available |
-| `scripts/tests/` | Focused tests for nontrivial validation script behavior. | Available |
+| `scripts/` | Directly executable validation and future packaging scripts. | Planned; not created |
+| `scripts/tests/` | Focused tests for future nontrivial validation script behavior. | Planned; not created |
 | `tests/` | Generated-template and integration acceptance tests. | Planned; not created |
 | `examples/` | Evidence-backed reference-project decisions, not source templates. | First reference available |
-| `.github/` | Playbook maintenance automation, issue forms, and PR guidance. | Available |
+| `.github/` | Issue forms and PR guidance; maintenance automation when justified. | Governance available; automation planned |
 
 ## Naming and authority
 
@@ -27,17 +27,16 @@ The playbook maintains standards, generated-starter source, executable verificat
 
 | File | Why it exists |
 | --- | --- |
-| `.editorconfig` | Stable UTF-8, LF, indentation and whitespace defaults for the playbook's current documents and scripts. This is not yet a consumer-project C# style template. |
+| `.editorconfig` | Stable UTF-8, LF, indentation and whitespace defaults for the playbook's current documents. This is not yet a consumer-project C# style template. |
 | `.gitattributes` | Predictable Git text normalization across operating systems; binary formats are exempt and Windows batch files keep CRLF. |
-| `.gitignore` | Excludes local Python, IDE, generated build and verification outputs without hiding source files. |
+| `.gitignore` | Excludes common local tooling, IDE, generated build and verification outputs without hiding source files. |
 | `AGENTS.md` and `CONTRIBUTING.md` | Consistent instructions for automation and human contributors, linked to one normative standard. |
 | `SECURITY.md` | A private reporting path and honest statement of the unreleased security support scope. |
 | `.github/ISSUE_TEMPLATE/` | Structured changes and safe defect reporting, both tied to the issue-first workflow. |
 | `.github/pull_request_template.md` | Reviewable changes with actual checks and explicit owner-merge approval. |
-| `.github/workflows/validate-foundation.yml` | GitHub wrapper for exactly the same Python validation operations available locally. |
 
-No `.NET` solution, NuGet configuration, runtime manifest, or toolchain file is needed to validate the current documentation-only foundation. Such files belong to future executable project templates when justified.
+No .NET solution, NuGet configuration, runtime manifest, or toolchain file is needed for the current documentation-only foundation. Automated validation belongs to later executable features when justified.
 
 ## Licensing decision
 
-The repository is private and no license has been selected for redistribution. Accordingly, no `LICENSE` file is introduced by Issue #1. Before publicly distributing templates, the owner must approve the licensing approach and verify compatibility with included assets and examples. Do not infer a public reuse grant from the absence of a license.
+The repository is public, but no redistribution license has been selected. Accordingly, no `LICENSE` file is introduced by Issue #1. Before distributing templates, the owner must approve the licensing approach and verify compatibility with included assets and examples. Public visibility alone does not grant permission to reuse or redistribute the content.
