@@ -11,6 +11,8 @@ The repository documents engineering standards and will eventually distribute .N
 5. Run the checks relevant to the change locally, then open one PR using the [pull request template](.github/pull_request_template.md). Include actual commands, results, environment versions, exact SHA, CI links, and limitations.
 6. Obtain an explicit second-pass owner review. A merge, tag, release, or package publication requires its own authorization; a green CI run grants none of these permissions.
 
+For significant platform, framework, library, dependency, or tooling decisions, follow the [evidence-based technical decision standard](docs/standards/engineering-principles.md#evidence-based-technical-decisions). Consult applicable existing guidance before designing an experiment; record remaining uncertainty, project-specific verification, and justified deviations in the issue or PR. Routine changes do not require a separate research artifact.
+
 ## Standards and exceptions
 
 Every normative standard identifies applicability and one of **Required**, **Recommended**, or **Optional**. A change to a Required standard needs an explicit reviewed decision. Document meaningful tradeoffs in a [decision record](docs/decisions/README.md). Avoid duplicating normative wording or mutable status across other documents.

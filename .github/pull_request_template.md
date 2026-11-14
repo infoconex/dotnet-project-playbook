@@ -16,6 +16,10 @@ Explain the smallest engineering outcome this PR delivers. One issue should ordi
 
 <!-- Include observed results; do not claim verification from planned tests or existence of source files. -->
 
+## Technical guidance and applicability (when relevant)
+
+For decisions involving external platform, library, dependency, or tooling behavior, link authoritative documentation and its applicable versions. Distinguish **Documented** behavior from **Verified** repository results and any **Experimental** investigation of remaining uncertainty. Explain justified deviations and their tradeoffs. Refer to the evidence recorded above rather than duplicating commands and status. Omit this section for routine changes.
+
 ## Standards, templates, and security
 
 - [ ] Applicable SOLID, TDD, dependency-boundary, and documentation policies are respected.

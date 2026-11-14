@@ -24,6 +24,8 @@ Every new normative standard should state:
 6. **Exceptions and alternatives:** conditions under which another approach is acceptable.
 7. **Templates and examples:** links to implemented assets when they exist, not promises of nonexistent files.
 
+When a standard or its implementation depends on established platform or third-party behavior, apply the [research-first technical decision principle](../standards/engineering-principles.md#evidence-based-technical-decisions). This is not an additional required research artifact for routine changes.
+
 ## Authority and change control
 
 - Standards own normative requirements and their applicability. Architecture Decision Records capture *why* significant choices were made, not a second mutable policy catalog.

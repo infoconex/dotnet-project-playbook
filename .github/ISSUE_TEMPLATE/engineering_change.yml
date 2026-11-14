@@ -44,3 +44,8 @@ body:
     attributes:
       label: Verification approach
       description: Identify tests, local commands, and evidence expected from the PR.
+  - type: textarea
+    id: technical-guidance
+    attributes:
+      label: Existing technical guidance and remaining uncertainty (when relevant)
+      description: For platform, framework, dependency or tooling decisions, link applicable authoritative guidance and versions, and identify what still needs verification or experimentation. Leave blank for routine work.

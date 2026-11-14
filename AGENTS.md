@@ -7,6 +7,7 @@ Follow [CONTRIBUTING.md](CONTRIBUTING.md) for the change workflow and [engineeri
 - Keep standards, distributable templates, validation scripts, and reference examples distinct. Do not place a project-specific assumption into a universal template.
 - Maintain SOLID and test-first development as mandatory expectations. Prefer hexagonal architecture, with physical project boundaries determined by responsibilities and actual dependencies.
 - A proposed template is not a working generator. Do not claim runtime, installation, security, coverage, or cross-platform acceptance without observed evidence.
+- For platform, framework, dependency, or tooling decisions, follow the [evidence-based technical decision standard](docs/standards/engineering-principles.md#evidence-based-technical-decisions): research applicable authoritative guidance first, identify remaining uncertainty, verify project-specific behavior, and justify deviations. Routine changes need no research write-up.
 - Prefer one authoritative definition for each policy or verification status. Link to it rather than maintaining synchronized copies.
 - Do not add placeholders, tools, dependencies, or configuration files without a demonstrated purpose.
 
