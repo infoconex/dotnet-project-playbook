@@ -69,6 +69,77 @@ class MarkdownValidationTests(unittest.TestCase):
         source = self.write("README.md", "[example][reference]\n\n[reference]: docs/example.md\n")
         self.assertEqual(validate_markdown(source, self.root), ([], 1))
 
+    def test_undefined_full_reference_is_rejected(self) -> None:
+        source = self.write("README.md", "See [installation instructions][install-guide].\n")
+        errors, count = validate_markdown(source, self.root)
+        self.assertEqual(count, 0)
+        self.assertIn("undefined reference", errors[0])
+        self.assertIn("install-guide", errors[0])
+
+    def test_undefined_collapsed_reference_is_rejected(self) -> None:
+        source = self.write("README.md", "Read [installation guide][].\n")
+        errors, count = validate_markdown(source, self.root)
+        self.assertEqual(count, 0)
+        self.assertIn("undefined reference", errors[0])
+        self.assertIn("installation guide", errors[0])
+
+    def test_reference_labels_are_case_and_whitespace_insensitive(self) -> None:
+        self.write("docs/guide.md", "# Guide\n")
+        source = self.write(
+            "README.md",
+            "Read [the guide][  INSTALL   GUIDE ].\n\n[Install Guide]: docs/guide.md\n",
+        )
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_ordinary_bracketed_text_is_not_an_undefined_reference(self) -> None:
+        source = self.write("README.md", "A [note] is not necessarily a link.\n")
+        self.assertEqual(validate_markdown(source, self.root), ([], 0))
+
+    def test_undefined_reference_in_code_is_ignored(self) -> None:
+        source = self.write(
+            "README.md",
+            "`[inline][unknown]`\n```markdown\n[fenced][unknown]\n```\n",
+        )
+        self.assertEqual(validate_markdown(source, self.root), ([], 0))
+
+    def test_same_document_heading_link_is_valid(self) -> None:
+        source = self.write(
+            "docs/guide.md",
+            "# Guide\n\n## Verification and applicability\n\n[Verification](#verification-and-applicability)\n",
+        )
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_same_document_missing_heading_is_reported(self) -> None:
+        source = self.write("docs/guide.md", "# Guide\n\n[Missing](#not-a-heading)\n")
+        errors, count = validate_markdown(source, self.root)
+        self.assertEqual(count, 1)
+        self.assertIn("missing heading", errors[0])
+
+    def test_balanced_parentheses_in_destination_are_valid(self) -> None:
+        self.write("docs/guide(v2).md", "# Guide\n")
+        source = self.write("README.md", "[Guide](docs/guide(v2).md)\n")
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_nested_parentheses_in_destination_are_valid(self) -> None:
+        self.write("docs/guide(v2(beta)).md", "# Guide\n")
+        source = self.write("README.md", "[Guide](docs/guide(v2(beta)).md)\n")
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_escaped_parentheses_in_destination_are_unescaped(self) -> None:
+        self.write("docs/guide(v2).md", "# Guide\n")
+        source = self.write("README.md", r"[Guide](docs/guide\(v2\).md)" + "\n")
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_parenthesized_destination_with_title_is_valid(self) -> None:
+        self.write("docs/guide(v2).md", "# Guide\n")
+        source = self.write("README.md", '[Guide](docs/guide(v2).md "Version 2")\n')
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
+    def test_angle_bracket_destination_with_spaces_is_valid(self) -> None:
+        self.write("docs/guide (v2).md", "# Guide\n")
+        source = self.write("README.md", "[Guide](<docs/guide (v2).md>)\n")
+        self.assertEqual(validate_markdown(source, self.root), ([], 1))
+
     def test_duplicate_headings_have_distinct_anchors(self) -> None:
         anchors = heading_anchors("# One\n# One\n## Another heading\n")
         self.assertEqual(anchors, {"one", "one-1", "another-heading"})
