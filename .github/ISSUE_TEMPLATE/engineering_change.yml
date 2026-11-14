@@ -1,0 +1,46 @@
+name: Engineering change
+description: Propose a standard, template, automation, or governance change.
+title: "[Engineering] "
+body:
+  - type: markdown
+    attributes:
+      value: "One issue should ordinarily correspond to one pull request. Explain the outcome before requesting implementation."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Standards
+        - Templates
+        - Validation automation
+        - Governance
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the desired outcome and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and exclusions
+      description: Identify affected standards and the changes that should not be made.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define independently verifiable outcomes.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Verification approach
+      description: Identify tests, local commands, and evidence expected from the PR.

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+.vs/
+.idea/
+*.user
+
+bin/
+obj/
+TestResults/
+artifacts/

@@ -1,5 +1,42 @@
 # .NET Project Playbook
 
-A developing collection of engineering standards, reusable project templates, and validation practices for .NET repositories.
+An engineering playbook for creating and maintaining dependable .NET repositories. It will combine documented standards, reusable project templates, and automated verification so a newly generated repository starts with coherent development and delivery practices.
 
-The initial repository foundation is tracked in [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1). Project generators and reusable templates are not available yet.
+## Current state
+
+**Foundation under development.** This repository currently documents its governing principles, contribution workflow, and planned template architecture. No installable .NET project templates or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) tracks the initial foundation; future issues will deliver executable templates and their acceptance tests.
+
+## Navigate the playbook
+
+| Topic | Start here |
+| --- | --- |
+| Approved engineering principles | [Engineering principles](docs/standards/engineering-principles.md) |
+| How standards are authored and changed | [Standards governance](docs/governance/standards.md) |
+| Repository layout and configuration | [Repository organization](docs/governance/repository-organization.md) |
+| Template design and planned project types | [Template architecture](docs/architecture/template-model.md) |
+| Architectural decisions | [Decision record index](docs/decisions/README.md) |
+| Reference project and lessons | [.NET Binary Tools case study](examples/dotnet-binary-tools.md) |
+| All documentation | [Documentation index](docs/README.md) |
+| Contributing | [Contribution guide](CONTRIBUTING.md) |
+| Security reporting | [Security policy](SECURITY.md) |
+
+## Intended adoption workflow
+
+Once project templates have been implemented and verified, a maintainer will select a project profile, generate an appropriately named solution and repository foundation, run the included validation scripts, and configure GitHub's repository-level protection and security features. **This is a future workflow, not a currently supported command.**
+
+Standards define requirements and rationale; templates provide reusable implementation; scripts validate behavior; examples demonstrate adoption. Each has a distinct [source of authority](docs/governance/standards.md). Not every practice requires the same project layout: SOLID and test-first development apply broadly, while separate compiled layers and deployment mechanisms depend on the application.
+
+## Reference implementation
+
+[.NET Binary Tools](https://github.com/infoconex/dotnet-binary-tools) is the first reference for architecture boundaries, requirements traceability, CI evidence, and review governance. It is an **example**, not an installable starter and not a source of mandatory binary-inspection conventions.
+
+## Validate this repository
+
+The initial documentation checks use Python 3 with no external packages. From the repository root:
+
+```shell
+python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
+python3 scripts/validate_docs.py
+```
+
+GitHub Actions invokes the same commands. These checks validate documentation structure and local links; they do **not** certify future .NET project templates.

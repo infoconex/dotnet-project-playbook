@@ -1,0 +1,31 @@
+name: Defect report
+description: Report an error in playbook documentation, a template, or a validator.
+title: "[Defect] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets or security-sensitive details here. Follow SECURITY.md for vulnerability reports."
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: What happened? Include relevant file paths and version or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and environment
+      description: Provide safe steps and any applicable tool and OS versions.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and workarounds
