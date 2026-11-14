@@ -4,7 +4,7 @@ An engineering playbook for creating and maintaining dependable .NET repositorie
 
 ## Current state
 
-**Foundation under development.** This repository currently documents its governing principles, contribution workflow, and planned template architecture. No installable .NET project templates or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) tracks the initial foundation; future issues will deliver executable templates and their acceptance tests.
+**Engineering foundation established.** This repository provides its governing principles, contribution workflow, foundational documentation validation, and planned template architecture. No installable .NET project templates or bootstrap commands are available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) established the foundation; subsequent issues will deliver executable templates and their acceptance tests.
 
 ## Navigate the playbook
 
