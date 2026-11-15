@@ -14,3 +14,5 @@ The playbook separates normative standards, their governance, architectural deci
 | Reference implementation | [.NET Binary Tools](../examples/dotnet-binary-tools.md) |
 
 The root [README](../README.md) describes current availability, and [start-here.md](../start-here.md) defines the interaction flow. [CONTRIBUTING.md](../CONTRIBUTING.md) governs repository changes; [AGENTS.md](../AGENTS.md) guides agents using or maintaining the playbook and is not a consumer-project template. Do not put scenario verification or release state in multiple navigation pages.
+
+For a versioned, read-only conversational test of the entry point, see [Evaluate the playbook](evaluate-playbook.md). This test scenario is non-normative and does not replace executable acceptance tests.
