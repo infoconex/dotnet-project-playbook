@@ -11,7 +11,7 @@ This repository is an unreleased engineering playbook. No project template packa
 
 ## Report a vulnerability
 
-If GitHub private vulnerability reporting is enabled for this repository, use its [private advisory form](https://github.com/infoconex/dotnet-project-playbook/security/advisories/new). **Availability of this feature has not been verified.** Otherwise, [contact the maintainer](https://github.com/infoconex) privately to arrange a reporting channel before sharing sensitive details.
+Submit vulnerability reports privately through GitHub's [Report a vulnerability form](https://github.com/infoconex/dotnet-project-playbook/security/advisories/new). Private vulnerability reporting is enabled for this repository; reports are delivered to the maintainers without creating a public issue.
 
 Do not publish secrets, exploit details, affected private data, or unredacted diagnostics in a GitHub issue or pull request. Include the affected revision, realistic prerequisites, impact, and a minimal synthetic reproduction in the private report. The maintainer will assess reports and coordinate appropriate remediation and disclosure; no fixed response-time promise is established.
 
