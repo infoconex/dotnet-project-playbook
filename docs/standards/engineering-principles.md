@@ -6,7 +6,7 @@ This is the authoritative baseline for engineering principles applied to project
 | --- | --- | --- |
 | [SOLID (`STD-010`)](solid.md#std-010) | Required | Design maintainable responsibilities, substitutions, interfaces, and dependency boundaries appropriate to the code. |
 | <a name="std-001"></a>Test-driven development (`STD-001`) | Required | For new executable behavior and defect fixes, write a meaningful failing test, implement minimally, then refactor. Explain justified exceptions when behavioral TDD is applicable. Documentation-only edits do not require a behavioral test or an exception. |
-| Dependency direction | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
+| [Dependency direction (`STD-011`)](dependency-direction.md#std-011) | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
 | Automated verification | Required | For meaningful executable behavior, check important outcomes and applicable structural constraints with locally reproducible evidence where practical. Document gaps; documentation-only review does not require an artificial automated check. |
 | <a name="std-002"></a>CI/local parity (`STD-002`) | Recommended | When CI is introduced, keep underlying validation in repository-controlled scripts; let CI provision tools, select environments, and publish results. |
 | Hexagonal (Ports and Adapters) architecture | Recommended | When external adapters or meaningful dependency boundaries exist, define ports where they are consumed, keep adapters outside business logic, and use the pattern where it clarifies real dependencies. |
@@ -30,7 +30,7 @@ For a defect, first reproduce the incorrect behavior with a regression test when
 
 ## Architectural interpretation
 
-SOLID and independence from infrastructure apply even to small class libraries. Hexagonal architecture is the preferred way to express boundaries when there are external adapters. It does **not** mandate four physical projects for every application. A complex service may need multiple independently compiled layers; a small pure library may need only the library and its tests.
+SOLID and [business-policy independence](dependency-direction.md#std-011) apply even to small class libraries. Hexagonal architecture is the preferred way to express boundaries when there are external adapters. It does **not** mandate four physical projects for every application. A complex service may need multiple independently compiled layers; a small pure library may need only the library and its tests.
 
 New abstractions should serve an actual dependency, extension requirement, or testing seam. Avoid speculative project layers and wrappers. Test selection and architecture checks must match the concrete project rather than blindly reusing another repository's project graph.
 
