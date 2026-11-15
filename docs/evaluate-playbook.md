@@ -7,7 +7,7 @@ This is a versioned, read-only **evaluation scenario**, not the playbook's sourc
 1. Start a fresh, unpersonalized conversation so previous preferences and project history do not influence the result.
 2. Open this document at a **commit-pinned GitHub URL**. Evaluate the [start-here guide](../start-here.md) and its linked standards from **the same commit**, not whichever version happens to be on `main`.
 3. Ask the assistant to run one scenario below. The developer answers discovery questions as they arise, including whether to opt into an optional second phase if offered. Do not provide an expected question list, a preferred architecture, or the desired phase transitions in the opening prompt.
-4. Preserve the transcript or final report for review. Record the playbook commit and AI client/model, the number and purpose of foundation versus application-feature questions, whether defaults were presented together, and whether any optional second phase was offered and explicitly chosen. Do not claim that a conversational simulation validates generated code or automated tooling.
+4. At the stopping condition, produce the **complete, self-contained evaluation report** described below in the conversation. A retained transcript may supplement the report but must not be required to interpret it after a Temporary Chat closes. Do not claim that a conversational simulation validates generated code or automated tooling.
 5. **All scenarios are read-only.** Do not create or clone repositories, write files, execute commands, open issues or PRs, or change settings. Read-only retrieval of accessible documentation and repository content is permitted.
 
 ## New-project scenario
@@ -27,6 +27,23 @@ As the AI assistant:
 **Opening objective:** I want a read-only assessment of an existing .NET repository against the playbook. The evaluator must provide a specific accessible repository or its contents; do not invent one.
 
 As the AI assistant, follow the same [start-here guide](../start-here.md), inspect actual evidence where accessible, and establish applicability and intentional exceptions before proposing improvements. Follow the developer's decision about any further discovery. Do not modify the target. If a missing source or capability prevents a reliable conclusion, explain the uncertainty rather than asserting compliance or a defect. Stop and report the first unsupported implementation or verification step after the assessment proposal.
+
+## Evaluation report requirements
+
+At the stopping condition, return the report **in the conversation**. Include the following so the evaluation can be compared with later revisions without reopening the original chat:
+
+1. **Evaluation identity:** Scenario, exact playbook commit, AI client/model (if known), authorization mode, and actual sources inspected.
+2. **Full chronological question-and-answer log:** Include **every question asked**, not merely representative examples or totals. For each numbered question, record:
+   - The phase or purpose: engineering foundation, optional application features, or a necessary clarification/transition.
+   - The question's actual wording.
+   - Every choice offered (or that it was free-text), the labeled recommended choice and explanation **as actually presented**, and whether interactive controls were observed. Mark absent information as *not presented*, rather than reconstructing it.
+   - The developer's actual response, including their selected option or free-text answer. Clearly mark any intentionally redacted sensitive content.
+   - A separate **evaluation judgment** about why the question was needed and whether it was useful, redundant, or could reasonably have been handled by a stated default. Distinguish this judgment from the observed exchange.
+3. **Discovery summary:** Count questions by phase and purpose; identify where the foundation proposal was reached, whether defaults were presented together, and whether application-feature discovery was offered, accepted, declined, or unnecessary. Note the exact question or decision that marked a phase transition.
+4. **Outcome and limitations:** Summarize applicable standards, proposed files/configuration and rationale, outstanding decisions, the first missing playbook-specific asset or verification capability, checks actually performed versus merely proposed, and any unclear or conflicting guidance.
+5. **Recommendations for improving the playbook:** Cite the relevant question numbers or observed behavior so suggested changes can be independently evaluated.
+
+Do not omit questions because the log is long, manufacture missing answers or recommendations, or silently turn an inference into an observation. If part of the conversation is genuinely unavailable, state the limitation and identify the missing span. This is **reporting guidance**, not a prescribed discovery questionnaire: the actual questions and phase transitions must come from the [start-here guide](../start-here.md) and developer responses.
 
 ## What this evaluation can establish
 
