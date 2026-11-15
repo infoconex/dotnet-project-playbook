@@ -14,6 +14,20 @@ This is the authoritative baseline for engineering principles applied to project
 | Evidence-based claims | Required | Distinguish designed, implemented, and observed/verified behavior. Record exact revisions and real test results. |
 | Research-first technical decisions | Required | When decisions depend on external platform, framework, or tooling behavior, consult applicable authoritative guidance before inventing a solution or discovery experiment; verify its applicability to the actual project. |
 
+## <a name="std-001-cycle"></a>Applying STD-001 — Test-driven development
+
+The Required TDD expectation in the table above is authoritative. It applies to **new executable behavior and defect corrections**, whether the behavior belongs to a pure library, an application component, or an infrastructure adapter. Select the [smallest meaningful behavioral boundary](../testing-guidance.md#choosing-the-first-test-and-broader-evidence) that can express the desired outcome; a unit test is not automatically the right first test for every change.
+
+1. **Red:** Express the next observable behavior or regression in a test, run it, and establish that it fails for the intended behavioral reason—not merely because the project fails to build, a fixture is broken, or the test environment is unavailable.
+2. **Green:** Make the smallest production change that satisfies that behavior and run the relevant test. Do not add speculative implementation or tests whose only purpose is to mirror private methods.
+3. **Refactor:** Improve names, responsibilities, duplication, and boundaries while retaining the passing behavioral tests. Repeat in small increments for additional behavior.
+
+For a defect, first reproduce the incorrect behavior with a regression test when feasible. For difficult existing code, a characterization test can establish what currently happens before changing it; distinguish that observation from the desired new behavior. TDD does not require every implementation line to have a separate test or mandate a single test framework, project graph, or level of test. [STD-009](testing.md#std-009) adds conditional real-boundary evidence when significant external-adapter behavior is involved; it does not replace the TDD cycle.
+
+**Justified exceptions:** If a meaningful failing test cannot reasonably be established first—for example, because a necessary external environment is unavailable, an emergency correction cannot wait for a test harness, or legacy coupling prevents a useful observation—keep the departure narrow. Explain the concrete obstacle, any characterization attempt, alternative verification actually performed, residual uncertainty, and appropriate follow-up in the issue or PR. Obtain the explicit review required for an exception to a Required standard. Difficulty or inconvenience alone is not an automatic exception. Documentation-only edits do not trigger behavioral TDD and need no exception.
+
+**Verification:** Review the behavioral tests and their outcomes, the scope of the change, and available evidence of the red-green-refactor sequence. A final passing test suite alone does not prove that tests were written first. Record what was observed rather than inferring TDD chronology or compatibility from source files. The [practical testing guide](../testing-guidance.md) supplies examples and Microsoft references without redefining STD-001.
+
 ## Architectural interpretation
 
 SOLID and independence from infrastructure apply even to small class libraries. Hexagonal architecture is the preferred way to express boundaries when there are external adapters. It does **not** mandate four physical projects for every application. A complex service may need multiple independently compiled layers; a small pure library may need only the library and its tests.
