@@ -2,7 +2,7 @@
 
 The playbook separates normative standards, their governance, architectural decisions, template implementation design, and examples.
 
-| Area | Source of authority |
+| Area | Primary reference |
 | --- | --- |
 | AI-guided setup and assessment | [Start here](../start-here.md) |
 | Registered engineering standards | [Standards catalog](standards/README.md) |

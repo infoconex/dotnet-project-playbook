@@ -8,9 +8,9 @@ The catalog is **an initial subset**, not a complete set of .NET engineering sta
 
 | ID | Category | Standard | Level | Applicability at a glance |
 | --- | --- | --- | --- | --- |
-| `STD-001` | Testing | [Test-driven development](engineering-principles.md) | Required | New executable behavior and defect corrections; justified exceptions remain possible. |
-| `STD-002` | Verification | [CI/local parity](engineering-principles.md) | Recommended | When CI exists, prefer repository-controlled checks runnable locally and called by CI. |
-| `STD-003` | Architecture | [Separate compiled projects](engineering-principles.md) | Optional | Add physical boundaries when responsibilities and dependencies justify them. |
+| `STD-001` | Testing | [Test-driven development](engineering-principles.md#std-001) | Required | New executable behavior and defect corrections; justified exceptions remain possible. |
+| `STD-002` | Verification | [CI/local parity](engineering-principles.md#std-002) | Recommended | When CI exists, prefer repository-controlled checks runnable locally and called by CI. |
+| `STD-003` | Architecture | [Separate compiled projects](engineering-principles.md#std-003) | Optional | Add physical boundaries when responsibilities and dependencies justify them. |
 
 These rows provide navigation and short applicability summaries. Consult the [authoritative engineering-principles table](engineering-principles.md) and [governance](../governance/standards.md) for the actual expectations, exceptions, and meanings of Required, Recommended, and Optional. A catalog entry does not establish that a target repository complies.
 
