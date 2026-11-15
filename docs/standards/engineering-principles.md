@@ -9,7 +9,7 @@ This is the authoritative baseline for engineering principles applied to project
 | [Dependency direction (`STD-011`)](dependency-direction.md#std-011) | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
 | Automated verification | Required | For meaningful executable behavior, check important outcomes and applicable structural constraints with locally reproducible evidence where practical. Document gaps; documentation-only review does not require an artificial automated check. |
 | <a name="std-002"></a>CI/local parity (`STD-002`) | Recommended | When CI is introduced, keep underlying validation in repository-controlled scripts; let CI provision tools, select environments, and publish results. |
-| Hexagonal (Ports and Adapters) architecture | Recommended | When external adapters or meaningful dependency boundaries exist, define ports where they are consumed, keep adapters outside business logic, and use the pattern where it clarifies real dependencies. |
+| [Hexagonal (Ports and Adapters) architecture (`STD-012`)](hexagonal.md#std-012) | Recommended | Prefer for meaningful application/adapter boundaries; when adopted, define explicit interfaces for inbound and outbound ports even with one implementation. |
 | <a name="std-003"></a>Separate compiled projects (`STD-003`) | Optional | Separate Domain, Application, Infrastructure, and presentation into compiled projects when responsibility and dependency boundaries justify the additional projects. |
 | Evidence-based claims | Required | Distinguish designed, implemented, and observed/verified behavior. Record exact revisions and real test results. |
 | Research-first technical decisions | Required | When decisions depend on external platform, framework, or tooling behavior, consult applicable authoritative guidance before inventing a solution or discovery experiment; verify its applicability to the actual project. |
@@ -30,9 +30,9 @@ For a defect, first reproduce the incorrect behavior with a regression test when
 
 ## Architectural interpretation
 
-SOLID and [business-policy independence](dependency-direction.md#std-011) apply even to small class libraries. Hexagonal architecture is the preferred way to express boundaries when there are external adapters. It does **not** mandate four physical projects for every application. A complex service may need multiple independently compiled layers; a small pure library may need only the library and its tests.
+SOLID and [business-policy independence](dependency-direction.md#std-011) apply even to small class libraries. [Hexagonal architecture](hexagonal.md#std-012) is the preferred way to express meaningful application and external-adapter boundaries; a documented simpler design is appropriate for trivial technical collaborations. When adopted, identified inbound and outbound ports use explicit interfaces. It does **not** mandate four physical projects for every application. A complex service may need multiple independently compiled layers; a small pure library may need only the library and its tests.
 
-New abstractions should serve an actual dependency, extension requirement, or testing seam. Avoid speculative project layers and wrappers. Test selection and architecture checks must match the concrete project rather than blindly reusing another repository's project graph.
+New abstractions should serve an actual dependency, extension requirement, or testing seam. Avoid speculative project layers and wrappers; the port-interface expectation applies to **identified ports in an adopted Hexagonal design**, not every class. Test selection and architecture checks must match the concrete project rather than blindly reusing another repository's project graph.
 
 ## Evidence-based technical decisions
 
