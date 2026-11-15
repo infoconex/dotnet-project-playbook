@@ -1,6 +1,6 @@
 # Repository organization and configuration
 
-The playbook maintains standards, generated-starter source, executable verification, and case studies in separate areas. Create a directory only when it has useful content; a proposed folder name does not imply that its capability is implemented.
+The playbook maintains standards, AI-assisted adoption guidance, reusable project assets, executable verification, and case studies in separate areas. Create a directory only when it has useful content; a proposed folder name does not imply that its capability is implemented.
 
 | Path | Responsibility | State |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ The playbook maintains standards, generated-starter source, executable verificat
 | `.editorconfig` | Stable UTF-8, LF, indentation and whitespace defaults for the playbook's current documents. This is not yet a consumer-project C# style template. |
 | `.gitattributes` | Predictable Git text normalization across operating systems; binary formats are exempt and Windows batch files keep CRLF. |
 | `.gitignore` | Excludes common local tooling, IDE, generated build and verification outputs without hiding source files. |
-| `AGENTS.md` and `CONTRIBUTING.md` | Consistent instructions for automation and human contributors, linked to one normative standard. |
+| Root `AGENTS.md` and `CONTRIBUTING.md` | Distinguish AI-assisted adoption guidance from rules for maintaining this repository; neither is a consumer-project template. |
 | `SECURITY.md` | A private reporting path and honest statement of the unreleased security support scope. |
 | `.github/ISSUE_TEMPLATE/` | Structured changes and safe defect reporting, both tied to the issue-first workflow. |
 | `.github/pull_request_template.md` | Reviewable changes with actual checks and explicit owner-merge approval. |

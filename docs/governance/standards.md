@@ -38,4 +38,6 @@ One issue should ordinarily have one PR. A normative change requires reviewed re
 
 ## Versioning and adoption
 
-Template releases, once implemented, should carry immutable version identity and provenance. A generated repository should identify the playbook revision from which it came. New playbook releases must not silently overwrite consumer customizations. The detailed update and compatibility mechanism remains future work.
+Template releases, once implemented, should carry immutable version identity and provenance. When the playbook is applied, the change proposal or review should identify the relevant playbook revision and asset versions where possible; no extra playbook-specific tracking file is required in the consumer repository.
+
+Adoption is AI-assisted and interactive, for both new and existing projects. The consumer's actual files and existing documentation are the evidence for later on-demand assessments. An agent should respect known project decisions, ask about ambiguity, and not assume that every difference is a defect. New playbook releases must not silently overwrite consumer customizations. The detailed update and compatibility mechanism remains future work. See the [adoption decision](../decisions/0002-ai-first-adoption.md) and [planned workflow](../architecture/template-model.md#ai-first-adoption-and-assessment).
