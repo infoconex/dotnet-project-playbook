@@ -4,7 +4,7 @@ title: "[Engineering] "
 body:
   - type: markdown
     attributes:
-      value: "One issue should ordinarily correspond to one pull request. Explain the outcome before requesting implementation."
+      value: "One issue should ordinarily correspond to one pull request. Describe the outcome; substantive changes follow the approved engineering kickoff in CONTRIBUTING.md."
   - type: dropdown
     id: area
     attributes:

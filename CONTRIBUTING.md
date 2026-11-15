@@ -5,8 +5,8 @@ The repository documents engineering standards and will eventually distribute .N
 ## Change workflow
 
 1. Reference a GitHub issue describing the problem, proposed outcome, and acceptance criteria. One issue should ordinarily have one pull request.
-2. For substantive implementation issues, complete the [engineering kickoff](#engineering-issue-kickoff) and confirm its decisions before starting implementation. Keep the kickoff proportional; routine, unambiguous maintenance can proceed without a formal kickoff.
-3. Obtain implementation authorization, then branch from current `main` using `issue/<number>-<short-description>`; do not commit directly to `main`.
+2. For substantive implementation issues, complete the [engineering kickoff](#engineering-issue-kickoff) and obtain approval of its consolidated scope before starting implementation. That approval authorizes implementation within the approved scope; no separate implementation approval is needed. Keep the kickoff proportional; routine, unambiguous maintenance can proceed without a formal kickoff when otherwise authorized.
+3. After recording the approved kickoff in the issue body and dated comment (or confirming authorization for routine maintenance), immediately branch from current `main` using `issue/<number>-<short-description>`; do not commit directly to `main`.
 4. Identify the authoritative document or template being changed. Preserve existing decisions and explain proposed exceptions explicitly.
 5. For executable behavior, start with a meaningful failing test, implement the smallest solution, and refactor. Documentation-only edits do not need a behavioral test or a TDD exception.
 6. Perform verification appropriate to the change, then open one PR using the [pull request template](.github/pull_request_template.md). Include applicable commands, actual results or manual review, exact SHA, and limitations; provide environment versions and CI links when applicable.
@@ -20,12 +20,12 @@ Before implementing a **substantive** engineering issue, conduct a kickoff to va
 
 1. **Prepare:** Read the issue, applicable standards, existing decisions, repository evidence, and relevant authoritative technical guidance. Identify questions that could materially affect scope, design, implementation, or verification. Do not revisit settled choices without a reason.
 2. **Ask:** Resolve one decision question at a time, using actionable interactive choices where supported and labeled text alternatives otherwise. Identify a recommended direction and explain its rationale and relevant tradeoffs when evidence supports one. Allow free-text responses. Do not manufacture questions to meet a quota.
-3. **Review:** Present the decisions, alternatives, open questions, and proposed issue changes together. Obtain explicit owner confirmation of the kickoff outcome before modifying the issue's implementation scope.
+3. **Review and approve:** Present the consolidated kickoff scope, acceptance criteria, implementation plan, and verification approach, including material decisions, alternatives, and any open questions. Obtain explicit owner approval of this outcome before modifying the issue's implementation scope. Approval also authorizes implementation within that scope.
 4. **Update the issue:** Reflect approved choices in its objective, scope, constraints, acceptance criteria, and verification approach as applicable. The issue body remains the authoritative *current* implementation contract.
 5. **Preserve the feedback:** Add a dated GitHub issue comment recording the material questions and answers, approved directions and rationale, alternatives considered, changes made to the issue, and decisions deferred. The comment preserves the kickoff history; it does not create a competing normative definition.
-6. **Authorize implementation separately:** Kickoff confirmation does not itself authorize branch creation, file changes, pull requests, merges, tags, releases, or publication.
+6. **Begin approved implementation:** After updating the issue and preserving the kickoff comment, immediately create the issue-specific feature branch, implement within the approved scope, commit at meaningful completion boundaries, verify, and open one PR for the required second-pass owner review. No further implementation approval is required. Kickoff approval does **not** authorize merging, tagging, releasing, or publication; each requires separate authorization, and branch protections and required checks must not be bypassed.
 
-For a straightforward substantive issue with no material open choices, the kickoff may be a brief confirmation of the existing direction and a concise comment. If implementation reveals a new material decision, pause beyond the approved scope, obtain direction, update the issue, and record the follow-up in a new comment.
+For a straightforward substantive issue with no material open choices, the kickoff may be a brief confirmation of the existing direction and a concise comment. If implementation reveals a new material decision or scope expansion, pause before proceeding beyond the approved scope, obtain owner direction, update the issue, and record the follow-up in a new comment. Proceed with any newly approved scope only after that approval is documented.
 
 ## Standards and exceptions
 
