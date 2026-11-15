@@ -30,6 +30,7 @@ The playbook maintains standards, AI-assisted adoption guidance, reusable projec
 | `.editorconfig` | Stable UTF-8, LF, indentation and whitespace defaults for the playbook's current documents. This is not yet a consumer-project C# style template. |
 | `.gitattributes` | Predictable Git text normalization across operating systems; binary formats are exempt and Windows batch files keep CRLF. |
 | `.gitignore` | Excludes common local tooling, IDE, generated build and verification outputs without hiding source files. |
+| `start-here.md` | Canonical AI-guided usage flow for new-project setup and existing-repository assessment; documentation, not an executable agent. |
 | Root `AGENTS.md` and `CONTRIBUTING.md` | Distinguish AI-assisted adoption guidance from rules for maintaining this repository; neither is a consumer-project template. |
 | `SECURITY.md` | A private reporting path and honest statement of the unreleased security support scope. |
 | `.github/ISSUE_TEMPLATE/` | Structured changes and safe defect reporting, both tied to the issue-first workflow. |

@@ -16,6 +16,7 @@ The longer-term direction is to consolidate this .NET-specific foundation into a
 
 | Topic | Start here |
 | --- | --- |
+| Begin AI-guided project setup or assessment | [Start here](start-here.md) |
 | Approved engineering principles | [Engineering principles](docs/standards/engineering-principles.md) |
 | How standards are authored and changed | [Standards governance](docs/governance/standards.md) |
 | Repository layout and configuration | [Repository organization](docs/governance/repository-organization.md) |
@@ -27,21 +28,11 @@ The longer-term direction is to consolidate this .NET-specific foundation into a
 | Contributing | [Contribution guide](CONTRIBUTING.md) |
 | Security reporting | [Security policy](SECURITY.md) |
 
-## Intended AI-assisted adoption workflow
+## Intended AI-assisted workflow
 
-When the necessary assets and guidance exist, a developer will point an AI coding agent to this playbook and a target repository. The agent must be given access to the relevant content; it cannot be assumed to discover an unrelated repository automatically.
+The [start-here guide](start-here.md) provides the conversational entry point for guiding a developer through discovery, assessment, a project-specific proposal, authorized changes, and later reassessment. A general-purpose AI assistant can follow this documented process when given access to the playbook and relevant project information. This does **not** constitute a verified adoption agent, installable project generator, or automated validation capability.
 
-1. **Discover:** Guide the developer through project decisions with focused questions, one at a time by default. For existing repositories, inspect current files and conventions to inform those questions.
-2. **Assess:** Identify applicable Required, Recommended, and Optional standards; distinguish actual gaps from intentional choices and unresolved questions.
-3. **Propose:** Explain a project-specific foundation or improvement plan, including affected files, alternatives, and verification. The developer controls whether the task is assessment-only or authorizes implementation.
-4. **Apply and verify when authorized:** Adapt canonical assets, create or modify relevant project structures, and run proportionate checks. Report actual results and unverified claims separately.
-5. **Reassess on demand:** Compare an existing repository with updated playbook guidance without silently overwriting its local decisions.
-
-The planned workflow does not require a playbook-specific tracking file in the target repository. It should rely on existing project content, ask when an intentional exception cannot be determined, and record the provenance of applied changes in the relevant change review. It should support manual reuse of assets as well as AI-assisted adaptation.
-
-**This is a future workflow, not a currently supported command or verified AI capability.**
-
-Standards define requirements and rationale; AI adoption guidance determines how to discover and apply them; templates provide reusable implementation; scripts validate behavior; examples demonstrate adoption. Each has a distinct [source of authority](docs/governance/standards.md). Not every practice requires the same project layout: SOLID and test-first development apply broadly, while separate compiled layers and deployment mechanisms depend on the application.
+Standards define requirements and rationale; the start-here guide describes how to use them; future templates provide reusable implementation; future scripts validate behavior; examples demonstrate adoption. Each has a distinct [source of authority](docs/governance/standards.md).
 
 ## Reference implementation
 

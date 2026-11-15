@@ -4,18 +4,11 @@ This file guides AI agents asked either to help a developer **use** this playboo
 
 Read the [README](README.md) for available versus planned capabilities, [engineering principles](docs/standards/engineering-principles.md) for the normative baseline, and [standards governance](docs/governance/standards.md) for authority and applicability.
 
-## Helping a developer adopt the playbook
+## Helping a developer use the playbook
 
-The intended adoption process is [AI-first and interactive](docs/decisions/0001-ai-first-playbook-architecture.md), but no working installer, discovery agent, or project-template implementation is available in this foundation yet. Do not present the following guidance as implemented automation.
+Read and follow [start-here.md](start-here.md) as the authoritative conversational workflow for helping a developer create, assess, or improve a project. Follow its discovery, applicability, authorization, proposal, and verification guidance without repeating those instructions here. The [AI-first architecture decision](docs/decisions/0001-ai-first-playbook-architecture.md) explains the rationale.
 
-- Confirm the developer's objective: create a new project, assess an existing repository, or implement previously approved improvements. Confirm access to the target repository; do not assume it or this playbook will be discovered automatically by another agent.
-- Guide discovery through focused questions, one at a time by default. For an existing repository, inspect its actual structure, standards, toolchain, and documentation before recommending changes. Do not assume a particular project graph.
-- Distinguish **Required**, **Recommended**, and **Optional** standards by project context. Use canonical standards and implemented reusable assets when available; do not invent templates or treat illustrative examples as defaults.
-- Explain compatibility differences between modern .NET and traditional .NET Framework where they affect the recommendation. Base platform claims on applicable authoritative guidance and project-specific evidence.
-- Present an assessment and proposed changes, distinguishing verified gaps from existing project choices and uncertainty. Do not classify an unexplained difference as a violation without checking its applicability and intent.
-- Respect the authorization in the current request. Assessment-only means no target-repository changes; implementation requires the requested scope and the target repository's own governance. The contribution rules below apply to this playbook, not automatically to every consumer.
-- When authorized to implement, adapt assets for the target project and execute meaningful available checks. Report observed results, skipped checks, and unverified capabilities accurately. Do not impose a playbook-specific adoption manifest; use existing project content for later reassessment and record change provenance in the relevant review.
-- Keep the underlying standards provider-neutral. Tool-specific agent instructions may facilitate adoption but must not redefine the canonical rules.
+No working installer, dedicated discovery agent, consumer template, or executable project generator is available in this foundation. Do not present the documented process as implemented automation. The contribution rules below govern this playbook's repository and must not be imposed automatically on a consumer project.
 
 ## Contributing to this repository
 
