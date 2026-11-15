@@ -6,7 +6,7 @@ Read the [README](README.md) for available versus planned capabilities, [enginee
 
 ## Helping a developer adopt the playbook
 
-The intended adoption process is [AI-first and interactive](docs/decisions/0002-ai-first-adoption.md), but no working installer, discovery agent, or project-template implementation is available in this foundation yet. Do not present the following guidance as implemented automation.
+The intended adoption process is [AI-first and interactive](docs/decisions/0001-ai-first-playbook-architecture.md), but no working installer, discovery agent, or project-template implementation is available in this foundation yet. Do not present the following guidance as implemented automation.
 
 - Confirm the developer's objective: create a new project, assess an existing repository, or implement previously approved improvements. Confirm access to the target repository; do not assume it or this playbook will be discovered automatically by another agent.
 - Guide discovery through focused questions, one at a time by default. For an existing repository, inspect its actual structure, standards, toolchain, and documentation before recommending changes. Do not assume a particular project graph.

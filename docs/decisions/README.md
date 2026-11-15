@@ -6,8 +6,7 @@ Decision records preserve the context, alternatives, decision, and consequences 
 
 | ID | Decision |
 | --- | --- |
-| [0001](0001-playbook-boundaries.md) | Separate standards, templates, validation, and examples |
-| [0002](0002-ai-first-adoption.md) | AI-first interactive discovery and project adoption |
+| [0001](0001-ai-first-playbook-architecture.md) | AI-first engineering playbook architecture |
 
 ## Conventions
 

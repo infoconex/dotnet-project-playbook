@@ -20,7 +20,7 @@ The longer-term direction is to consolidate this .NET-specific foundation into a
 | How standards are authored and changed | [Standards governance](docs/governance/standards.md) |
 | Repository layout and configuration | [Repository organization](docs/governance/repository-organization.md) |
 | Template design and planned project types | [Template architecture](docs/architecture/template-model.md) |
-| Planned AI-first adoption decision | [ADR 0002](docs/decisions/0002-ai-first-adoption.md) |
+| AI-first architecture decision | [ADR 0001](docs/decisions/0001-ai-first-playbook-architecture.md) |
 | Architectural decisions | [Decision record index](docs/decisions/README.md) |
 | Reference project and lessons | [.NET Binary Tools case study](examples/dotnet-binary-tools.md) |
 | All documentation | [Documentation index](docs/README.md) |
