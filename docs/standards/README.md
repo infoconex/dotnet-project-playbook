@@ -17,8 +17,9 @@ The catalog is **an initial subset**, not a complete set of .NET engineering sta
 | `STD-007` | C# configuration | [Repository-controlled EditorConfig in new C# projects](csharp.md#std-007) | Required | Newly established C# projects, satisfied by an applicable tracked EditorConfig. |
 | `STD-008` | C# diagnostics | [Risk-based compiler and analyzer enforcement](csharp.md#std-008) | Recommended | Where compiler and supported analyzer diagnostics can be meaningfully reviewed. |
 | `STD-009` | Testing | [Representative external-boundary verification](testing.md#std-009) | Required (conditional) | Materially significant new or changed external-adapter behavior; use representative real dependencies or appropriately validated contracts. |
+| `STD-010` | Design | [SOLID design principles](solid.md#std-010) | Required | New or materially changed object-oriented C# design; apply all five principles in context without mandatory speculative abstractions. |
 
-These rows provide navigation and short applicability summaries. Consult the [authoritative engineering principles](engineering-principles.md), [playbook-specific C# standards](csharp.md), [external-boundary testing standard](testing.md), and [governance](../governance/standards.md) for actual expectations, exceptions, and meanings of Required, Recommended, and Optional. A catalog entry does not establish that a target repository complies.
+These rows provide navigation and short applicability summaries. Consult the [authoritative engineering principles](engineering-principles.md), [playbook-specific C# standards](csharp.md), [external-boundary testing standard](testing.md), [SOLID standard](solid.md#std-010), and [governance](../governance/standards.md) for actual expectations, exceptions, and meanings of Required, Recommended, and Optional. A catalog entry does not establish that a target repository complies.
 
 ## Applying the catalog to a project
 
@@ -26,7 +27,7 @@ Determine the project's purpose, project type, target framework, supported opera
 
 | Project context | How to interpret the initial standards |
 | --- | --- |
-| Class library | Apply TDD to applicable new behavior and fixes; project separation remains optional rather than a mandatory layered solution. STD-009 does not apply without a significant external-adapter boundary. |
+| Class library | Apply SOLID and TDD to applicable new behavior and fixes; project separation remains optional rather than a mandatory layered solution. STD-009 does not apply without a significant external-adapter boundary. |
 | Command-line application | Assess the same practices against its actual dependencies and test surfaces; introduce CI/local parity guidance when CI is present. |
 | Web API | Assess the same foundation practices while recognizing that hosting, infrastructure, and security details require further applicable standards. |
 | Worker | Assess applicable engineering practices without assuming the application needs web presentation or a prescribed project graph. |
