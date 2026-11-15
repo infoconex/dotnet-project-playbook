@@ -1,0 +1,56 @@
+name: Engineering change
+description: Propose a standard, template, automation, or governance change.
+title: "[Engineering] "
+body:
+  - type: markdown
+    attributes:
+      value: "One issue should ordinarily correspond to one pull request. Explain the outcome before requesting implementation."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Standards
+        - Templates
+        - Validation automation
+        - Governance
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the desired outcome and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and exclusions
+      description: Identify affected standards and the changes that should not be made.
+    validations:
+      required: true
+  - type: textarea
+    id: kickoff-decisions
+    attributes:
+      label: Kickoff decisions to confirm (if known)
+      description: List unresolved choices that could change the implementation direction. Leave blank when none are known; the engineering kickoff follows issue creation and precedes implementation. See CONTRIBUTING.md.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define independently verifiable outcomes.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Verification approach
+      description: Identify tests, local commands, and evidence expected from the PR.
+  - type: textarea
+    id: technical-guidance
+    attributes:
+      label: Existing technical guidance and remaining uncertainty (when relevant)
+      description: For platform, framework, dependency or tooling decisions, link applicable authoritative guidance and versions, and identify what still needs verification or experimentation. Leave blank for routine work.
