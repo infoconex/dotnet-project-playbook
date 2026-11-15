@@ -5,6 +5,7 @@ The playbook separates normative standards, their governance, architectural deci
 | Area | Source of authority |
 | --- | --- |
 | AI-guided setup and assessment | [Start here](../start-here.md) |
+| Registered engineering standards | [Standards catalog](standards/README.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
 | Standards and exceptions process | [Standards governance](governance/standards.md) |
 | Layout, naming, and initial configuration | [Repository organization](governance/repository-organization.md) |

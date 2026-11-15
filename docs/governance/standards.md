@@ -26,6 +26,14 @@ Every new normative standard should state:
 
 When a standard or its implementation depends on established platform or third-party behavior, apply the [research-first technical decision principle](../standards/engineering-principles.md#evidence-based-technical-decisions). This is not an additional required research artifact for routine changes.
 
+## Standard identifiers and organization
+
+- Assign one globally sequential, immutable identifier of the form `STD-001`, `STD-002`, etc. to each independently assessable engineering practice. Do not assign an ID to an entire collection of unrelated expectations or ordinarily to each individual configuration setting.
+- Allocate the next unused identifier when a real standard is introduced. Never renumber existing identifiers after a category, title, or document change, and never reuse retired identifiers. Do not reserve speculative IDs for unwritten standards.
+- Group related standards in topic-oriented Markdown documents. Maintain category separately from identity so organizational changes do not affect existing references.
+- Use the [standards catalog](../standards/README.md) as a navigable registry of ID, category, title, and authoritative link. Catalog summaries must not redefine an obligation, its applicability, or its exceptions; the linked normative standard remains the source of truth.
+- When a later issue expands an existing practice, preserve its identifier and update the authoritative content and catalog link together rather than introducing a competing standard.
+
 ## Authority and change control
 
 - Standards own normative requirements and their applicability. Architecture Decision Records capture *why* significant choices were made, not a second mutable policy catalog.

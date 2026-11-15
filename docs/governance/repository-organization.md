@@ -4,7 +4,7 @@ The playbook maintains standards, AI-assisted adoption guidance, reusable projec
 
 | Path | Responsibility | State |
 | --- | --- | --- |
-| `docs/standards/` | Normative engineering expectations with explicit applicability. | Initial principles available |
+| `docs/standards/` | Normative engineering expectations with explicit applicability. | Initial principles and catalog available |
 | `docs/governance/` | Standards lifecycle, contribution policy, and repository conventions. | Available |
 | `docs/architecture/` | Decisions about template composition and technical design. | Design available |
 | `docs/decisions/` | Sequential immutable ADR rationale and supersession history. | Available |
