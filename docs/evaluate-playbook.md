@@ -26,13 +26,17 @@ As the AI assistant:
 
 **Opening objective:** I want a read-only assessment of an existing .NET repository against the playbook. The evaluator must provide a specific accessible repository or its contents; do not invent one.
 
-As the AI assistant, follow the same [start-here guide](../start-here.md), inspect actual evidence where accessible, and establish applicability and intentional exceptions before proposing improvements. Follow the developer's decision about any further discovery. Do not modify the target. If a missing source or capability prevents a reliable conclusion, explain the uncertainty rather than asserting compliance or a defect. Stop and report the first unsupported implementation or verification step after the assessment proposal.
+As the AI assistant, follow the same [start-here guide](../start-here.md), inspect actual evidence where accessible, and establish applicability and intentional exceptions before proposing improvements. Follow the developer's decision about any further discovery.
+
+Attempt to resolve the **exact target commit SHA** for the repository and branch/ref under assessment using available **read-only** repository metadata. Where possible, inspect target files at that immutable revision and distinguish such evidence from content retrieved through a moving branch. If the SHA cannot be resolved, record the supplied repository and branch/ref, the failed or unavailable retrieval method, and which findings rely on unpinned evidence. Proceed with appropriately qualified conclusions; do not invent a SHA, treat a branch name as immutable, or claim exact-revision verification.
+
+Do not modify the target. If a missing source or capability prevents a reliable conclusion, explain the uncertainty rather than asserting compliance or a defect. Stop and report the first unsupported implementation or verification step after the assessment proposal.
 
 ## Evaluation report requirements
 
 At the stopping condition, return the report **in the conversation**. Include the following so the evaluation can be compared with later revisions without reopening the original chat:
 
-1. **Evaluation identity:** Scenario, exact playbook commit, AI client/model (if known), authorization mode, and actual sources inspected.
+1. **Evaluation identity:** Scenario, exact playbook commit, AI client/model (if known), authorization mode, and actual sources inspected. For an existing-repository scenario, include the target repository, requested branch/ref, **resolved target commit SHA and how it was obtained**, and whether inspected evidence was pinned to that SHA. If resolution was unavailable, explicitly say so, record the attempted method and retrieval date, and distinguish unpinned evidence from immutable-revision evidence. For new-project scenarios with no target repository, mark the target SHA as not applicable.
 2. **Full chronological question-and-answer log:** Include **every question asked**, not merely representative examples or totals. For each numbered question, record:
    - The phase or purpose: engineering foundation, optional application features, or a necessary clarification/transition.
    - The question's actual wording.
