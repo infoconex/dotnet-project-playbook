@@ -2,6 +2,8 @@
 
 Use this document as the entry point when asking an AI assistant to establish a new .NET project, assess an existing repository, or plan and carry out authorized improvements. It describes a provider-neutral, interactive process. It is not an installed agent, generator, or executable command; see the [current capabilities](README.md#current-state) before making implementation claims.
 
+Engineering-foundation discovery is the primary workflow. Detailed application-feature discovery is a separate, optional second phase, offered when useful rather than assumed. A developer can finish after the foundation proposal without supplying an exhaustive feature specification.
+
 This is guidance for **using** the playbook. The root [AGENTS.md](AGENTS.md) and [contribution guide](CONTRIBUTING.md) also govern work **on this repository**; they are not consumer-project templates. A target repository's own instructions and authorization remain applicable.
 
 ## Establish the request
@@ -15,27 +17,40 @@ This is guidance for **using** the playbook. The root [AGENTS.md](AGENTS.md) and
 - Ask **exactly one decision question per turn** and wait for the developer's answer before asking another. Do not disguise several questions as subparts of one. Skip questions already answered or resolved by available project evidence.
 - When a question has meaningful alternatives, offer a small set of mutually exclusive, clearly labeled choices. Prefer the AI client's **native clickable selection controls** (such as buttons or a choice picker) when supported; otherwise use easy-to-reply-to labeled choices such as A, B, and C. Always allow a free-text alternative.
 - **Identify a recommended option** when the known requirements support one. Label it **Recommended**, preferably first, and briefly explain why it fits, including the most relevant tradeoff. A recommendation is not authorization to implement. If the available evidence does not justify a recommendation, say what is uncertain and ask for the one missing detail needed.
-- Keep wording concise and neutral. Adapt each next question to the preceding answer and observed evidence; do not administer a fixed questionnaire or request information already provided.
+- Keep wording concise and neutral. Adapt each next question to the preceding answer and observed evidence; do not administer a fixed questionnaire or request information already provided. Present known, applicable foundation defaults as a group before asking whether the developer wants to change any of them; do not turn each default into a separate question.
 
-## Discover the project context
+## Phase 1: establish or assess the engineering foundation
 
-- For **new projects**, establish the intended capability and project type before choosing a solution shape, language version, target framework, operating systems, testing approach, or optional integrations. Ask about these details only when they affect a decision.
-- For **existing repositories**, inspect actual source, project files, dependency configuration, tests, workflows, and documented decisions when access is authorized. Distinguish observed evidence from assumptions. If the repository cannot be inspected, identify what remains unknown rather than inventing a baseline.
-- Apply **Required**, **Recommended**, and **Optional** practices according to their documented applicability. Identify intentional exceptions and ask about ambiguous differences before calling them defects.
+- For **new projects**, establish only enough application context to select relevant engineering foundations: a brief purpose, project type, language/framework, supported platforms, and material constraints such as security, deployment, or distribution. Ask for missing details when they affect a foundation decision; do not begin a full feature or requirements interview in this phase.
+- For **existing repositories**, first inspect actual source, project files, dependency configuration, tests, workflows, conventions, and documented decisions when access is authorized. Distinguish observed evidence from assumptions. Use the current repository as the baseline, not a hypothetical new-project template. If it cannot be inspected, identify what remains unknown.
+- Present the applicable **Required**, **Recommended**, and **Optional** engineering standards and known defaults together, with brief reasons and explicit applicability. Distinguish established normative guidance from proposed settings, unavailable reusable assets, and project-specific choices. The current [engineering principles](docs/standards/engineering-principles.md) are authoritative; a complete, executable defaults catalog and consumer templates are not yet provided.
+- Highlight decisions that depend on the language, framework, project type, platform, existing conventions, or actual constraints. Do not invent defaults for these choices or require every user to answer an exhaustive checklist. Explain material compatibility conflicts and alternatives.
+- After presenting the foundation defaults, ask **one question** about whether the developer wants to change anything. Use the [interactive question format](#interactive-question-format), including an evidence-backed recommendation and reason when justified. If the developer requests changes or a necessary choice remains unresolved, address each material decision one at a time.
+- For existing repositories, compare the observed foundation against applicable standards, respect intentional exceptions, and ask about ambiguous differences before labeling them defects. Do not treat every difference from the playbook's preferred starting point as noncompliance.
 - Apply SOLID and test-first development as described in the [engineering principles](docs/standards/engineering-principles.md). Prefer logical Ports and Adapters boundaries when helpful, but do not impose additional compiled projects without a responsibility-based reason.
-- Consider compatibility between modern .NET and traditional .NET Framework. For technical decisions depending on platform behavior, research applicable authoritative guidance before identifying what still requires project-specific verification.
+- Account for modern .NET and traditional .NET Framework differences. For technical decisions depending on platform behavior, research applicable authoritative guidance before identifying what still requires project-specific verification.
 
-## Propose a project-specific outcome
+## Propose the engineering foundation
 
-After enough discovery, provide a concise, reviewable proposal that identifies:
+After sufficient **foundation** discovery, provide a concise, reviewable proposal before any optional feature-discovery phase. It should identify:
 
-1. The objective, known facts, chosen defaults, unresolved questions, and any assumptions.
+1. The objective, known application context, applicable foundation defaults, project-specific choices, unresolved questions, and any assumptions.
 2. Applicable standards and exceptions, with links to their authoritative sources.
-3. The project structure, files, configuration, or changes that **would** be introduced or adjusted, and why. Distinguish canonical assets that actually exist from proposed or custom-created content.
+3. The engineering project structure, files, configuration, or changes that **would** be introduced or adjusted, and why. Keep detailed product features outside this foundation proposal unless they materially affect its decisions. Distinguish canonical assets that actually exist from proposed or custom-created content.
 4. Compatibility constraints, conflicts between selected capabilities, and choices requiring developer input. Do not silently resolve material conflicts.
 5. Verification appropriate to the changes: relevant restore, build, tests, static checks, and environment-specific checks as applicable. Prefer repository-owned scripts callable locally and from CI **when such scripts exist**. Never report a planned check as a passing check.
 
 The proposal is not implementation authorization. In read-only mode, describe intended actions without creating repositories, files, branches, issues, or pull requests.
+
+## Phase 2: offer optional application-feature discovery
+
+Once the foundation proposal is reviewable, decide whether detailed application discovery would add value. This is **secondary** to the engineering foundation, not a prerequisite for proposing it.
+
+- For a **new application**, offer one clear opt-in question, such as "Would you like to continue with detailed application-feature discovery?" Recommend proceeding when substantial behavior or requirements remain undefined, explaining why; allow the developer to stop with the foundation proposal or return later.
+- For an **existing repository**, first use its documented and implemented capabilities. Do not automatically restart requirements discovery. Offer targeted feature discovery only when the developer requests it or observed gaps, intended feature changes, or unresolved behavior make it useful. It may be unnecessary for a foundation-only assessment.
+- If the developer opts in, explore appropriate capabilities, functional and nonfunctional requirements, acceptance scenarios, and feature boundaries, **one question at a time**. Reuse known facts and adapt the depth to the project; do not require a fixed-length questionnaire.
+- If feature discovery reveals a material engineering constraint (for example, security, persistence, platform, or reliability needs), return to the affected foundation choice, explain the impact, and seek any needed decision. Do not silently replace an approved default or repository-specific exception.
+- If the developer declines or the second phase is unnecessary, finish the foundation outcome without manufacturing a feature specification. Neither phase authorizes implementation by itself.
 
 ## Implement or reassess only within authorization
 
@@ -47,6 +62,6 @@ For later on-demand assessment, inspect the consumer's current files and decisio
 
 ## Report what is known
 
-Summarize the resulting decisions and proposed or completed actions, including applicable standards, actual verification results, skipped or unavailable checks, and outstanding questions. Keep documented guidance, implemented assets, and experimentally verified behavior distinct.
+Summarize the resulting foundation decisions and proposed or completed actions, noting whether optional feature discovery was completed, deferred, or unnecessary, alongside applicable standards, actual verification results, skipped or unavailable checks, and outstanding questions. Keep documented guidance, implemented assets, and experimentally verified behavior distinct.
 
 The [README](README.md#current-state) describes what this playbook currently offers. Following this conversational process with an AI assistant does **not** itself establish that a dedicated adoption agent, templates, or executable validation have been implemented or tested.
