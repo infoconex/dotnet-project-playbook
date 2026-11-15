@@ -10,6 +10,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Playbook-specific testing standards | [Testing standards](standards/testing.md) |
 | Applying Microsoft's C# guidance | [Microsoft C# guidance map](csharp-guidance.md) |
 | Playbook-specific C# standards | [C# standards](standards/csharp.md) |
+| SOLID design requirements | [STD-010 — SOLID standard](standards/solid.md#std-010) |
+| Optional SOLID refresher and C# examples | [SOLID guidance](solid-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
 | Standards and exceptions process | [Standards governance](governance/standards.md) |
 | Layout, naming, and initial configuration | [Repository organization](governance/repository-organization.md) |

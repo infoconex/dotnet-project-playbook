@@ -4,7 +4,7 @@ This is the authoritative baseline for engineering principles applied to project
 
 | Principle | Level | Application |
 | --- | --- | --- |
-| SOLID | Required | Design maintainable responsibilities, substitutions, interfaces, and dependency boundaries appropriate to the code. |
+| [SOLID (`STD-010`)](solid.md#std-010) | Required | Design maintainable responsibilities, substitutions, interfaces, and dependency boundaries appropriate to the code. |
 | <a name="std-001"></a>Test-driven development (`STD-001`) | Required | For new executable behavior and defect fixes, write a meaningful failing test, implement minimally, then refactor. Explain justified exceptions when behavioral TDD is applicable. Documentation-only edits do not require a behavioral test or an exception. |
 | Dependency direction | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
 | Automated verification | Required | For meaningful executable behavior, check important outcomes and applicable structural constraints with locally reproducible evidence where practical. Document gaps; documentation-only review does not require an artificial automated check. |
