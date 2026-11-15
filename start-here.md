@@ -10,7 +10,12 @@ This is guidance for **using** the playbook. The root [AGENTS.md](AGENTS.md) and
 2. Determine the objective: establish a new project, assess an existing repository, implement approved changes, or reassess against current playbook guidance. If the developer has already stated the objective, do not ask again.
 3. Establish the authorized mode and access to the relevant repository. An assessment or simulation is read-only. Do not assume that a target repository or its configuration is accessible, and do not interpret a request for advice as permission to make changes.
 
-Ask **one focused question at a time**, using concise choices and a free-text alternative when helpful. Adapt subsequent questions to the answers and evidence. Do not administer a fixed questionnaire or ask for information already available in the repository.
+## Interactive question format
+
+- Ask **exactly one decision question per turn** and wait for the developer's answer before asking another. Do not disguise several questions as subparts of one. Skip questions already answered or resolved by available project evidence.
+- When a question has meaningful alternatives, offer a small set of mutually exclusive, clearly labeled choices. Prefer the AI client's **native clickable selection controls** (such as buttons or a choice picker) when supported; otherwise use easy-to-reply-to labeled choices such as A, B, and C. Always allow a free-text alternative.
+- **Identify a recommended option** when the known requirements support one. Label it **Recommended**, preferably first, and briefly explain why it fits, including the most relevant tradeoff. A recommendation is not authorization to implement. If the available evidence does not justify a recommendation, say what is uncertain and ask for the one missing detail needed.
+- Keep wording concise and neutral. Adapt each next question to the preceding answer and observed evidence; do not administer a fixed questionnaire or request information already provided.
 
 ## Discover the project context
 
