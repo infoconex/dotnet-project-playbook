@@ -14,7 +14,7 @@ This is the authoritative baseline for engineering principles applied to project
 | Evidence-based claims | Required | Distinguish designed, implemented, and observed/verified behavior. Record exact revisions and real test results. |
 | Research-first technical decisions | Required | When decisions depend on external platform, framework, or tooling behavior, consult applicable authoritative guidance before inventing a solution or discovery experiment; verify its applicability to the actual project. |
 
-## Applying STD-001 — Test-driven development
+## <a name="std-001-cycle"></a>Applying STD-001 — Test-driven development
 
 The Required TDD expectation in the table above is authoritative. It applies to **new executable behavior and defect corrections**, whether the behavior belongs to a pure library, an application component, or an infrastructure adapter. Select the [smallest meaningful behavioral boundary](../testing-guidance.md#choosing-the-first-test-and-broader-evidence) that can express the desired outcome; a unit test is not automatically the right first test for every change.
 
