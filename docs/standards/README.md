@@ -16,8 +16,9 @@ The catalog is **an initial subset**, not a complete set of .NET engineering sta
 | `STD-006` | C# nullability | [Nullable reference types in new compatible projects](csharp.md#std-006) | Required | New C# projects with a supported language, target framework, and toolchain combination. |
 | `STD-007` | C# configuration | [Repository-controlled EditorConfig in new C# projects](csharp.md#std-007) | Required | Newly established C# projects, satisfied by an applicable tracked EditorConfig. |
 | `STD-008` | C# diagnostics | [Risk-based compiler and analyzer enforcement](csharp.md#std-008) | Recommended | Where compiler and supported analyzer diagnostics can be meaningfully reviewed. |
+| `STD-009` | Testing | [Representative external-boundary verification](testing.md#std-009) | Required (conditional) | Materially significant new or changed external-adapter behavior; use representative real dependencies or appropriately validated contracts. |
 
-These rows provide navigation and short applicability summaries. Consult the [authoritative engineering-principles table](engineering-principles.md), [playbook-specific C# standards](csharp.md), and [governance](../governance/standards.md) for actual expectations, exceptions, and meanings of Required, Recommended, and Optional. A catalog entry does not establish that a target repository complies.
+These rows provide navigation and short applicability summaries. Consult the [authoritative engineering principles](engineering-principles.md), [playbook-specific C# standards](csharp.md), [external-boundary testing standard](testing.md), and [governance](../governance/standards.md) for actual expectations, exceptions, and meanings of Required, Recommended, and Optional. A catalog entry does not establish that a target repository complies.
 
 ## Applying the catalog to a project
 
@@ -25,7 +26,7 @@ Determine the project's purpose, project type, target framework, supported opera
 
 | Project context | How to interpret the initial standards |
 | --- | --- |
-| Class library | Apply TDD to applicable new behavior and fixes; project separation remains optional rather than a mandatory layered solution. |
+| Class library | Apply TDD to applicable new behavior and fixes; project separation remains optional rather than a mandatory layered solution. STD-009 does not apply without a significant external-adapter boundary. |
 | Command-line application | Assess the same practices against its actual dependencies and test surfaces; introduce CI/local parity guidance when CI is present. |
 | Web API | Assess the same foundation practices while recognizing that hosting, infrastructure, and security details require further applicable standards. |
 | Worker | Assess applicable engineering practices without assuming the application needs web presentation or a prescribed project graph. |
@@ -38,6 +39,6 @@ These are **applicability notes**, not an exhaustive or profile-specific standar
 
 Group related standards in topic-oriented Markdown documents as those standards are approved. Each independently assessable practice receives one permanent global identifier. Categories can change, but identifiers cannot; individual EditorConfig keys and other low-level configuration settings ordinarily remain implementation details of a practice.
 
-Future topic guidance will address testing, design and architecture, build and dependency management, security, compatibility, requirements, and verification. Do not create placeholder files merely to reserve these topics or IDs. Existing Microsoft C# guidance should be linked rather than redefined in new playbook standards unless a deliberate deviation or stronger obligation is approved.
+The [testing guide](../testing-guidance.md) expands practical test selection without creating an ID for every technique. Future topic guidance will further address design and architecture, build and dependency management, security, compatibility, requirements, and verification. Do not create placeholder files merely to reserve these topics or IDs. Existing Microsoft guidance should be linked rather than redefined in new playbook standards unless a deliberate deviation or stronger obligation is approved.
 
 For interactive project setup and read-only existing-repository assessment, follow the single [start-here guide](../../start-here.md). Reusable consumer templates, executable checks, and comprehensive domain guidance are not yet available through this catalog.
