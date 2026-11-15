@@ -32,6 +32,11 @@ body:
     validations:
       required: true
   - type: textarea
+    id: kickoff-decisions
+    attributes:
+      label: Kickoff decisions to confirm (if known)
+      description: List unresolved choices that could change the implementation direction. Leave blank when none are known; the engineering kickoff follows issue creation and precedes implementation. See CONTRIBUTING.md.
+  - type: textarea
     id: acceptance
     attributes:
       label: Acceptance criteria
