@@ -8,7 +8,7 @@ This is the authoritative baseline for engineering principles applied to project
 | <a name="std-001"></a>Test-driven development (`STD-001`) | Required | For new executable behavior and defect fixes, write a meaningful failing test, implement minimally, then refactor. Explain justified exceptions when behavioral TDD is applicable. Documentation-only edits do not require a behavioral test or an exception. |
 | [Dependency direction (`STD-011`)](dependency-direction.md#std-011) | Required | Keep business policies independent of concrete infrastructure and presentation mechanisms. |
 | Automated verification | Required | For meaningful executable behavior, check important outcomes and applicable structural constraints with locally reproducible evidence where practical. Document gaps; documentation-only review does not require an artificial automated check. |
-| <a name="std-002"></a>CI/local parity (`STD-002`) | Recommended | When CI is introduced, keep underlying validation in repository-controlled scripts; let CI provision tools, select environments, and publish results. |
+| <a name="std-002"></a>CI/local parity (`STD-002`) | Recommended | When CI exists, prefer the same locally reproducible verification operations using native commands directly when sufficient or repository-controlled scripts when they add value; let CI provision tools, select environments, record outcomes, and publish results. |
 | [Hexagonal (Ports and Adapters) architecture (`STD-012`)](hexagonal.md#std-012) | Recommended | Prefer for meaningful application/adapter boundaries; when adopted, define explicit interfaces for inbound and outbound ports even with one implementation. |
 | [Clean Architecture (`STD-013`)](clean.md#std-013) | Recommended | Prefer where meaningful application use cases and external dependencies benefit from a protected Application Core with inward compile-time dependencies. |
 | [Domain-Driven Design and Domain Modeling (`STD-014`)](ddd.md#std-014) | Recommended | Prefer for meaningful domain complexity; when adopted, maintain context-specific business language, domain behavior, and consistency boundaries. |
@@ -65,6 +65,10 @@ Classify the evidence accurately:
 For significant technical decisions, record the applicable sources, the uncertainty that justified investigation, the actual verification evidence, and any intentional departure from authoritative guidance with rationale and tradeoffs. Keep changing implementation/CI status in the issue or PR, not duplicated across permanent standards. This is proportional guidance: routine application work and straightforward TDD changes do **not** require a research report or a mandatory literature search.
 
 The [.NET Binary Tools multi-RID and lock-file example](../../examples/dotnet-binary-tools.md#documented-guidance-and-repository-specific-verification) illustrates how published guidance and focused application-specific tests complement one another.
+
+## Applying STD-002 — CI/local parity
+
+This **Recommended** standard addresses reproducibility of the underlying verification operation when CI is present. A directly shared native command is sufficient when it makes the check understandable and locally repeatable; add a repository-controlled script for actual multi-step coordination, version handling or maintainability, not an artificial scripting requirement. CI can provision environments, choose OS/architecture and publish artifacts while invoking the same verification behavior. GitHub-managed checks (for example hosted CodeQL or Dependabot services) may be documented exceptions. Identical operating systems are not required, but material environment differences and unexecuted checks must be disclosed. Consult the [non-normative verification guide](../verification-guidance.md) for applicability and evidence examples without treating a configured workflow as a pass.
 
 ## Verification and applicability
 
