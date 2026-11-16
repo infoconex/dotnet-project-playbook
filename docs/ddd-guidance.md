@@ -90,7 +90,8 @@ public enum OrderStatus { Draft, Submitted, Dispatched, Cancelled }
 
 public sealed class Order
 {
-    private int _lineCount;
+    private readonly System.Collections.Generic.List<Quantity> _lineQuantities =
+        new System.Collections.Generic.List<Quantity>();
 
     public System.Guid Id { get; }
     public OrderStatus Status { get; private set; }
@@ -111,12 +112,12 @@ public sealed class Order
         if (quantity.Value <= 0)
             throw new System.ArgumentOutOfRangeException(nameof(quantity));
 
-        checked { _lineCount += quantity.Value; }
+        _lineQuantities.Add(quantity);
     }
 
     public void Submit()
     {
-        if (Status != OrderStatus.Draft || _lineCount == 0)
+        if (Status != OrderStatus.Draft || _lineQuantities.Count == 0)
             throw new System.InvalidOperationException("A draft needs a line.");
 
         Status = OrderStatus.Submitted;
@@ -140,7 +141,7 @@ public sealed class Order
 }
 ~~~
 
-This abbreviated model counts line quantities rather than representing actual products, pricing, fulfillment reservations, or child line entities. An actual order aggregate would need those concepts only if the business scenarios require them. The important property shown is that callers cannot set `Status` directly or bypass the transition methods. The guard in `AddLine` also rejects a default/invalid `Quantity`; the value object alone would not prevent all invalid default struct values.
+This abbreviated model stores line quantities without representing actual products, pricing, fulfillment reservations, or child line entities. An actual order aggregate would need those concepts only if the business scenarios require them. The private collection keeps callers from changing the illustrative lines outside the root's behavior; likewise, callers cannot set `Status` directly or bypass its transitions. The guard in `AddLine` also rejects a default/invalid `Quantity`; the value object alone would not prevent all invalid default struct values.
 
 `OrderTests.cs` — illustrative NUnit 3-style behavioral scenarios:
 
