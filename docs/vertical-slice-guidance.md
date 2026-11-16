@@ -46,7 +46,7 @@ Using command and query classes does not by itself mean a system adopted Vertica
 | Clean | Which code constitutes the protected Application Core? | If adopted, all designated core code remains independent of concrete infrastructure/presentation |
 | DDD | Who owns domain meaning and invariants? | A feature can orchestrate domain behavior without becoming an aggregate or bounded context |
 | Modular monolith | Which business capabilities own behavior and data within one deployment? | A module can contain multiple slices; no automatic one-to-one mapping |
-| Microservices | Which services deploy and operate independently? | Outside this issue; see [Issue #27](https://github.com/infoconex/dotnet-project-playbook/issues/27) |
+| Microservices | Which services deploy and operate independently? | Separate deployment decision under [STD-017](standards/microservices.md#std-017), with [on-demand guidance](microservices-guidance.md) |
 
 For example, `Orders/Features/CancelOrder` can be a slice inside an `Orders` module. An `Inventory` module still owns stock reservations and their consistency rules. `CancelOrder` should request an approved Inventory capability rather than directly update Inventory's tables. This example has one deployment and says nothing about microservices, CQRS, or required project count.
 

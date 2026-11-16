@@ -138,7 +138,7 @@ Example compile-time references:
 - `OrderCore` has **no compile-time reference** to `OrderInfrastructure` or `OrderApi`.
 - `OrderCore.Tests → OrderCore`; adapter tests reference only the production artifacts they need.
 
-The API, core, and infrastructure assemblies can **still be deployed together as one application**; creating multiple projects is not automatically microservices or multiple deployment units.
+The API, core, and infrastructure assemblies can **still be deployed together as one application**; creating multiple projects is not automatically microservices or multiple deployment units. The separate conditional [Microservices Architecture standard (STD-017)](standards/microservices.md#std-017) addresses real independent service deployment and operations, not compiled-project count.
 
 When **Clean Architecture** is selected, its core-wide dependency rule applies even if all roles initially reside in one assembly. When **Hexagonal Architecture** is selected, every identified inbound and outbound port has the explicit interface required by [STD-012](standards/hexagonal.md#std-012). Neither style is automatically adopted just because a folder resembles a layer. See the [Clean Architecture guide](clean-guidance.md) and [Hexagonal guide](hexagonal-guidance.md) for worked boundary examples.
 

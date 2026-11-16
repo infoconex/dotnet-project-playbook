@@ -49,7 +49,7 @@ These adopted-style expectations do not redefine the independently Required test
 | [STD-015 — Modular Monolith](modular-monolith.md#std-015) | Independently Recommended business-capability module ownership and controlled collaboration in one deployment. Slices can organize **within** modules; neither style requires the other. |
 | [Proportionate single-project guidance](../single-project-guidance.md) | Describes compilation/project counts, not application feature decomposition. |
 | [Traditional layered/N-tier guidance](../layered-n-tier-guidance.md) | Describes logical technical responsibilities and physical tiers; slices can coexist with layers without disabling policy dependencies. |
-| [Microservices — Issue #27](https://github.com/infoconex/dotnet-project-playbook/issues/27) | Independent service deployment and operational boundaries are outside STD-016. A slice is not a deployable service. |
+| [STD-017 — Microservices](microservices.md#std-017) | Independently Recommended when substantial service-level autonomy is justified; it owns deployment, contract, data and operational boundaries. A slice is not a deployable service. |
 
 Vertical Slice Architecture and Modular Monolith Architecture address **different scales of ownership**: a module owns a business capability and governs collaboration with other modules; a slice groups use-case behavior and the work needed to change it. A single module may contain many slices, and slices can exist in a non-modular-monolith application. Likewise, adopting Hexagonal or Clean Architecture is a separate decision, not a consequence of using feature folders.
 

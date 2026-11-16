@@ -45,7 +45,7 @@ Microsoft describes a monolith as a single-deployment application even when its 
 | [Clean](standards/clean.md#std-013) | What is the protected Application Core? | A module may adopt its inward core rule without requiring all modules to do so |
 | [DDD](standards/ddd.md#std-014) | What models express business meaning and invariants? | Bounded contexts often inform modules, but neither requires the other or a one-to-one mapping |
 | [Vertical Slice — STD-016](standards/vertical-slice.md#std-016) | How should feature/use-case changes be organized? | Feature slices can be organized **within** a module; neither style automatically requires the other |
-| [Microservices — Issue #27](https://github.com/infoconex/dotnet-project-playbook/issues/27) | Which capabilities need independent service deployment and autonomy? | A separate decision about network contracts, operations, security, and distributed consistency |
+| [Microservices — STD-017](standards/microservices.md#std-017) | Which capabilities truly benefit from separate releases and operations? | A separate conditional choice about service contracts, owned data, security, distributed consistency and operational evidence; see the [Microservices guide](microservices-guidance.md) |
 
 Combining styles means adopting **each selected style's** applicable obligations; a similar-looking directory does not automatically adopt it. For example, using `Orders/Domain` and `Orders/Infrastructure` does not by itself establish Clean or Hexagonal Architecture. Nor does preferring in-process calls excuse an actual violation of STD-011.
 
@@ -204,7 +204,7 @@ For supported modern .NET hosts, Microsoft's dependency-injection guidelines hel
 | Significant module startup change | Were registrations and disposal/lifetimes actually exercised? | Verify meaningful composition path |
 | Traditional .NET Framework monolith | Can one capability be isolated without breaking current API/build constraints? | Prefer incremental, compatibility-conscious adoption |
 | Module claims Hexagonal or Clean | Are all applicable adopted-style port/core expectations satisfied? | Evaluate each style independently |
-| Team contemplates extracting a service | Is independent deployment actually needed, and what are the data/transaction costs? | Separate Issue #27 decision; extraction is not the goal |
+| Team contemplates extracting a service | Is independent deployment actually needed, and what are the data/transaction costs? | Separate conditional [STD-017](standards/microservices.md#std-017) decision; extraction is not the goal |
 
 ### Practical evidence strategy
 
