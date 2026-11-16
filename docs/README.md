@@ -12,6 +12,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Playbook-specific C# standards | [C# standards](standards/csharp.md) |
 | Choosing .NET SDK, MSBuild, NuGet, and repository configuration | [Build and dependency guidance](build-dependency-guidance.md) |
 | Assessing target frameworks, platform compatibility and execution evidence | [Platform compatibility guidance](platform-compatibility-guidance.md) |
+| Proportionate requirements and acceptance traceability | [STD-022 — Requirements and acceptance traceability](standards/requirements.md#std-022) |
+| Optional capability, scenario, quality and evidence examples | [Requirements and acceptance guidance](requirements-guidance.md) |
 | Required security and software supply-chain obligations | [STD-019–STD-021 — Security standards](standards/security.md) |
 | Optional secrets, dependency, scanning, and security-review decisions | [Security and software supply-chain guidance](security-guidance.md) |
 | SOLID design requirements | [STD-010 — SOLID standard](standards/solid.md#std-010) |
