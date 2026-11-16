@@ -10,6 +10,7 @@ The playbook separates normative standards, their governance, architectural deci
 | Playbook-specific testing standards | [Testing standards](standards/testing.md) |
 | Applying Microsoft's C# guidance | [Microsoft C# guidance map](csharp-guidance.md) |
 | Playbook-specific C# standards | [C# standards](standards/csharp.md) |
+| Choosing .NET SDK, MSBuild, NuGet, and repository configuration | [Build and dependency guidance](build-dependency-guidance.md) |
 | SOLID design requirements | [STD-010 — SOLID standard](standards/solid.md#std-010) |
 | Optional SOLID refresher and C# examples | [SOLID guidance](solid-guidance.md) |
 | Business-policy dependency direction | [STD-011 — Dependency direction](standards/dependency-direction.md#std-011) |
