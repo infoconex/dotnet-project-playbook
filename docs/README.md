@@ -21,6 +21,7 @@ The playbook separates normative standards, their governance, architectural deci
 | Domain-Driven Design and Domain Modeling | [STD-014 — DDD standard](standards/ddd.md#std-014) |
 | Optional strategic/tactical domain modeling and C# examples | [DDD guidance](ddd-guidance.md) |
 | Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
+| Logical layers versus physical N-tier deployment | [Traditional layered and N-tier architecture guidance](layered-n-tier-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
 | Standards and exceptions process | [Standards governance](governance/standards.md) |
 | Layout, naming, and initial configuration | [Repository organization](governance/repository-organization.md) |

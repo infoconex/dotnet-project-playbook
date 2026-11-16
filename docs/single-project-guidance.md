@@ -31,7 +31,7 @@ Microsoft's [common web application architectures](https://learn.microsoft.com/e
 | Test project | Independently compiled test code referencing production behavior when the chosen tooling supports it | An additional **production** layer |
 | Deployment unit | The application and required artifacts deployed/released together | The number of compiled projects used to build it |
 
-A solution can contain three production libraries/projects and still ship one application deployment. A project can also be built as part of more than one distribution workflow; neither source project count nor assembly count alone determines deployment topology. Microsoft distinguishes *logical layers* from *physical deployment tiers* in its [architecture discussion](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures).
+A solution can contain three production libraries/projects and still ship one application deployment. A project can also be built as part of more than one distribution workflow; neither source project count nor assembly count alone determines deployment topology. Microsoft distinguishes *logical layers* from *physical deployment tiers* in its [architecture discussion](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures). The [layered and N-tier guide](layered-n-tier-guidance.md) discusses when physical network tiers, strict or relaxed calls, and their operational costs actually matter; none is implied by a multi-project solution.
 
 ## Level 2 — Worked project-shape examples
 
