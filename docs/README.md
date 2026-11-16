@@ -7,6 +7,7 @@ The playbook separates normative standards, their governance, architectural deci
 | AI-guided setup and assessment | [Start here](../start-here.md) |
 | Registered engineering standards | [Standards catalog](standards/README.md) |
 | Applying Microsoft's .NET testing guidance | [Testing guidance map](testing-guidance.md) |
+| Choosing proportionate verification, coverage and CI/local checks | [Automated verification guide](verification-guidance.md) |
 | Playbook-specific testing standards | [Testing standards](standards/testing.md) |
 | Applying Microsoft's C# guidance | [Microsoft C# guidance map](csharp-guidance.md) |
 | Playbook-specific C# standards | [C# standards](standards/csharp.md) |

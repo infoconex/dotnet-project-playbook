@@ -29,7 +29,7 @@ Follow [CONTRIBUTING.md](CONTRIBUTING.md) for the change workflow. These rules g
 - Do not commit directly to `main`, merge, tag, publish, or release without explicit owner authorization. The repository's one-time bootstrap commit was an approved exception.
 - For executable behavior changes, use TDD: meaningful failing test, minimum implementation, then refactoring. Documentation-only edits do not require behavioral tests or an exception; review their accuracy and navigation instead.
 - Run relevant locally executable checks when they exist and capture actual results, environment versions, commit SHA, and applicable CI links in the pull request. For documentation-only changes, record the review performed.
-- When automated checks are introduced, GitHub Actions should orchestrate repository-owned validation scripts; GitHub-managed platform services are documented exceptions.
+- When automated checks are introduced, GitHub Actions should invoke equivalent repository-controlled native commands or validation scripts as appropriate; GitHub-managed platform services are documented exceptions.
 - Never confuse unavailable or skipped checks with passing validation. A documentation review does not establish a successful build or template-generation test.
 
 ## Current verification

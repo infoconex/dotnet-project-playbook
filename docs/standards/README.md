@@ -50,6 +50,8 @@ These are **applicability notes**, not an exhaustive or profile-specific standar
 
 ## Where additional standards belong
 
+The [automated verification, coverage, and CI/local parity guide](../verification-guidance.md) maps applicable checks, failure policies and execution evidence without assigning a new STD identifier or redefining [STD-002](engineering-principles.md#std-002), [STD-008](csharp.md#std-008), [STD-009](testing.md#std-009), [security obligations](security.md), or [STD-022](requirements.md#std-022). It distinguishes direct native commands from beneficial scripts and configured services from observed runs.
+
 The [build and dependency configuration guide](../build-dependency-guidance.md) explains conditional SDK/MSBuild/NuGet configuration, legacy compatibility, dependency locking, source trust, and verification without assigning a separate build-configuration standard or redefining [CI/local parity (STD-002)](engineering-principles.md#std-002), [EditorConfig (STD-007)](csharp.md#std-007), or [diagnostic enforcement (STD-008)](csharp.md#std-008). It is non-normative guidance, not an additional registered standard.
 
 The [platform compatibility guide](../platform-compatibility-guidance.md) distinguishes framework, restore, build, test, execution, packaging, OS, architecture and toolchain assertions. It offers on-demand evidence matrices and modern/legacy examples without introducing a platform standard or redefining existing [evidence-based claims](engineering-principles.md#evidence-based-technical-decisions), STD-002, STD-008 or STD-009.

@@ -47,7 +47,7 @@ After sufficient **foundation** discovery, provide a concise, reviewable proposa
 2. Applicable standards and exceptions, with links to their authoritative sources.
 3. The engineering project structure, files, configuration, or changes that **would** be introduced or adjusted, and why. Keep detailed product features outside this foundation proposal unless they materially affect its decisions. Distinguish canonical assets that actually exist from proposed or custom-created content.
 4. Compatibility constraints, conflicts between selected capabilities, and choices requiring developer input. Do not silently resolve material conflicts.
-5. Verification appropriate to the changes: relevant restore, build, tests, static checks, and environment-specific checks as applicable. Prefer repository-owned scripts callable locally and from CI **when such scripts exist**. Never report a planned check as a passing check.
+5. Verification appropriate to the changes: relevant restore, build, tests, static checks, and environment-specific checks as applicable. Prefer repository-owned scripts callable locally and from CI **when such scripts exist**. Never report a planned check as a passing check. Use the [verification guide](docs/verification-guidance.md) to select checks proportionately, distinguish observed outcomes, and avoid presuming CI or tooling already exists.
 
 The proposal is not implementation authorization. In read-only mode, describe intended actions without creating repositories, files, branches, issues, or pull requests.
 
