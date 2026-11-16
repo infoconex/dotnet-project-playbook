@@ -214,6 +214,8 @@ For a real model, examine whether constructors, setters, serializers, ORM materi
 - In legacy work, characterize affected existing behavior, improve one meaningful rule or context boundary at a time, retain public contracts unless change is authorized, and review actual regressions. Do not mandate a whole-system rewrite.
 - Record the exact revision, tests actually run, business evidence reviewed, unsupported environment scenarios, and unresolved consistency risks. Documentation-only examples here have no compiled/tested verification claim.
 
+A domain event need not become an externally published integration event. When a consequential event-mediated flow is independently processed, consult conditional [STD-018](standards/event-driven.md#std-018) and its [event-driven guide](event-driven-guidance.md) for contract, delivery and recovery decisions; STD-014 remains responsible for domain meaning and invariants.
+
 ## Microsoft references and interpretation
 
 - [Use domain analysis to model microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis) — strategic concepts, subdomains, bounded contexts, and ownership.
