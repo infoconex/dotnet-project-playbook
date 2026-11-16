@@ -44,7 +44,7 @@ Microsoft describes a monolith as a single-deployment application even when its 
 | [Hexagonal](standards/hexagonal.md#std-012) | What are application ports and external adapters? | A module may adopt Hexagonal; every identified inbound and outbound **port** then needs an explicit interface |
 | [Clean](standards/clean.md#std-013) | What is the protected Application Core? | A module may adopt its inward core rule without requiring all modules to do so |
 | [DDD](standards/ddd.md#std-014) | What models express business meaning and invariants? | Bounded contexts often inform modules, but neither requires the other or a one-to-one mapping |
-| [Vertical Slice — Issue #26](https://github.com/infoconex/dotnet-project-playbook/issues/26) | How should feature/use-case changes be organized? | Feature slices can be organized **within** a module; its independent standard is out of scope here |
+| [Vertical Slice — STD-016](standards/vertical-slice.md#std-016) | How should feature/use-case changes be organized? | Feature slices can be organized **within** a module; neither style automatically requires the other |
 | [Microservices — Issue #27](https://github.com/infoconex/dotnet-project-playbook/issues/27) | Which capabilities need independent service deployment and autonomy? | A separate decision about network contracts, operations, security, and distributed consistency |
 
 Combining styles means adopting **each selected style's** applicable obligations; a similar-looking directory does not automatically adopt it. For example, using `Orders/Domain` and `Orders/Infrastructure` does not by itself establish Clean or Hexagonal Architecture. Nor does preferring in-process calls excuse an actual violation of STD-011.
@@ -239,6 +239,6 @@ You may deliberately stop at a well-structured modular monolith. Independent dep
 - [Microsoft incremental modernization pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig) — phased risk reduction without requiring service extraction.
 - [Kamil Grzybek's original modular-monolith implementation](https://github.com/kgrzybek/modular-monolith-with-ddd) — a stricter, valid illustrative design using events and schema boundaries, **not a set of mandatory .NET conventions**.
 - [Martin Fowler's Monolith First](https://martinfowler.com/bliki/MonolithFirst.html) — first-party analysis and caveats on decomposing monoliths into separate services.
-- [Jimmy Bogard's Vertical Slice Architecture](https://www.jimmybogard.com/vertical-slice-architecture/) — first-party feature/use-case organization distinction; [Issue #26](https://github.com/infoconex/dotnet-project-playbook/issues/26) owns any separately assessed standard.
+- [Jimmy Bogard's Vertical Slice Architecture](https://www.jimmybogard.com/vertical-slice-architecture/) — first-party feature/use-case organization distinction; [STD-016](standards/vertical-slice.md#std-016) separately owns adopted feature-level cohesion, not module ownership.
 
 These are documented design principles and examples, not experimental verification of this guide's snippets. [STD-015](standards/modular-monolith.md#std-015) remains the sole authority for the adopted module-level obligation.

@@ -22,6 +22,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Optional strategic/tactical domain modeling and C# examples | [DDD guidance](ddd-guidance.md) |
 | Modular Monolith Architecture | [STD-015 — Modular Monolith Architecture](standards/modular-monolith.md#std-015) |
 | Optional module ownership, contracts, data, and verification examples | [Modular Monolith Architecture guidance](modular-monolith-guidance.md) |
+| Vertical Slice Architecture | [STD-016 — Vertical Slice Architecture](standards/vertical-slice.md#std-016) |
+| Optional feature cohesion, handlers/CQRS, and verification examples | [Vertical Slice Architecture guidance](vertical-slice-guidance.md) |
 | Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
 | Logical layers versus physical N-tier deployment | [Traditional layered and N-tier architecture guidance](layered-n-tier-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
