@@ -5,6 +5,7 @@ The playbook separates normative standards, their governance, architectural deci
 | Area | Primary reference |
 | --- | --- |
 | AI-guided setup and assessment | [Start here](../start-here.md) |
+| AI-guided standards applicability, findings and recommendations | [Assessment guidance](assessment-guidance.md) |
 | Registered engineering standards | [Standards catalog](standards/README.md) |
 | Applying Microsoft's .NET testing guidance | [Testing guidance map](testing-guidance.md) |
 | Choosing proportionate verification, coverage and CI/local checks | [Automated verification guide](verification-guidance.md) |
@@ -47,4 +48,4 @@ The playbook separates normative standards, their governance, architectural deci
 
 The root [README](../README.md) describes current availability, and [start-here.md](../start-here.md) defines the interaction flow. [CONTRIBUTING.md](../CONTRIBUTING.md) governs repository changes; [AGENTS.md](../AGENTS.md) guides agents using or maintaining the playbook and is not a consumer-project template. Do not put scenario verification or release state in multiple navigation pages.
 
-For a versioned, read-only conversational test of the entry point, see [Evaluate the playbook](evaluate-playbook.md). This test scenario is non-normative and does not replace executable acceptance tests.
+For versioned, read-only conversational tests of the entry point, see [Evaluate the playbook](evaluate-playbook.md) and the [three-case evaluation corpus](evaluation-corpus.md). These protocols are non-normative and do not replace actual observed conversations or executable acceptance tests.
