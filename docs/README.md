@@ -18,6 +18,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Optional ports, adapters, and C# testing examples | [Hexagonal Architecture guidance](hexagonal-guidance.md) |
 | Clean Architecture | [STD-013 — Clean Architecture](standards/clean.md#std-013) |
 | Optional Application Core, dependency, and C# examples | [Clean Architecture guidance](clean-guidance.md) |
+| Domain-Driven Design and Domain Modeling | [STD-014 — DDD standard](standards/ddd.md#std-014) |
+| Optional strategic/tactical domain modeling and C# examples | [DDD guidance](ddd-guidance.md) |
 | Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
 | Standards and exceptions process | [Standards governance](governance/standards.md) |
