@@ -225,6 +225,8 @@ Microsoft's [Strangler Fig pattern](https://learn.microsoft.com/en-us/azure/arch
 - Do tests prove meaningful behavior and the actual external guarantees they claim?
 - Are the exact observed toolchain, revision, tests, limitations, and compatibility risks recorded?
 
+If a slice participates in a consequential event-mediated workflow, evaluate the separately conditional [STD-018](standards/event-driven.md#std-018) and its [event-driven guide](event-driven-guidance.md). A feature handler, mediated request or slice boundary does not itself call for asynchronous messaging, CQRS or event sourcing.
+
 ## Primary references and boundary of claims
 
 - [Microsoft — Feature organization in ASP.NET Core MVC](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/develop-asp-net-core-mvc-apps#feature-organization) and [Feature Slices for ASP.NET Core MVC](https://learn.microsoft.com/en-us/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc): alternatives to technical-type folders, not requirements for one class per endpoint.

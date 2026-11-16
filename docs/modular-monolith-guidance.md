@@ -229,6 +229,8 @@ Modern SDK-style .NET can use supported `dotnet` tooling and modern hosting faci
 
 You may deliberately stop at a well-structured modular monolith. Independent deployment, network contracts, service autonomy, distributed consistency, and scaling characteristics belong to a separate microservices evaluation and are **not** eventual acceptance criteria for modularity.
 
+When significant independently processed or durable events are chosen inside a modular monolith, evaluate their separate contract, delivery and recovery consequences using conditional [STD-018](standards/event-driven.md#std-018) and its [event-driven guide](event-driven-guidance.md). This does not change the legitimacy of direct in-process collaboration, local atomic transactions or ordinary synchronous domain events.
+
 ## Primary references and guidance boundary
 
 - [Microsoft .NET architectural principles](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles) — encapsulation, separation, abstraction, and bounded contexts.

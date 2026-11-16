@@ -18,6 +18,7 @@ As the AI assistant:
 
 - Read and follow the [start-here guide](../start-here.md) and relevant authoritative documents at the same revision. If the documents cannot be accessed, report that limitation and stop rather than guessing.
 - Guide the developer through the discovery and proposal described by the playbook. Let the developer's answers determine which further information matters, including any follow-up discovery they choose.
+- If the developer describes a consequential asynchronous workflow, integration, fan-out or background job, check whether the assistant compares straightforward synchronous mechanisms with conditional [STD-018](standards/event-driven.md#std-018). A small CRUD/library example with no such needs should not be prescribed a broker or event bus. This is a judgment of the conversational proposal, not a required implementation or a new universal questionnaire.
 - Describe proposed actions only, without carrying them out.
 - **Do not stop merely because a generator or template is absent before completing discovery and the proposed plan.** Once the proposal is complete, identify the first step that would require an unavailable playbook asset or verified capability, then stop without inventing one.
 - At that point, report the foundation decisions and remaining unknowns, optional application-discovery decisions (if any), proposed files or configurations and why, applicable documented standards, intended verification, the exact implementation boundary, and any unclear or conflicting playbook guidance. Distinguish observed facts, proposals, and unverified capabilities.
@@ -27,6 +28,8 @@ As the AI assistant:
 **Opening objective:** I want a read-only assessment of an existing .NET repository against the playbook. The evaluator must provide a specific accessible repository or its contents; do not invent one.
 
 As the AI assistant, follow the same [start-here guide](../start-here.md), inspect actual evidence where accessible, and establish applicability and intentional exceptions before proposing improvements. Follow the developer's decision about any further discovery.
+
+When the target uses event-mediated interactions, examine observed producers/consumers, transaction and published-contract evidence before assessing conditional [STD-018](standards/event-driven.md#std-018); report missing broker/deployment verification as unknown, not a proven defect. Do not mark a synchronous monolith or service as noncompliant for lacking event-driven infrastructure.
 
 Attempt to resolve the **exact target commit SHA** for the repository and branch/ref under assessment using available **read-only** repository metadata. Where possible, inspect target files at that immutable revision and distinguish such evidence from content retrieved through a moving branch. If the SHA cannot be resolved, record the supplied repository and branch/ref, the failed or unavailable retrieval method, and which findings rely on unpinned evidence. Proceed with appropriately qualified conclusions; do not invent a SHA, treat a branch name as immutable, or claim exact-revision verification.
 

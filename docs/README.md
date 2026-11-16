@@ -26,6 +26,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Optional feature cohesion, handlers/CQRS, and verification examples | [Vertical Slice Architecture guidance](vertical-slice-guidance.md) |
 | Microservices Architecture | [STD-017 — Microservices Architecture](standards/microservices.md#std-017) |
 | Optional service selection, data, deployment, security, and operational evidence examples | [Microservices Architecture guidance](microservices-guidance.md) |
+| Event-Driven Architecture | [STD-018 — Event-Driven Architecture](standards/event-driven.md#std-018) |
+| Optional event communication selection, contracts, failure and recovery examples | [Event-Driven Architecture guidance](event-driven-guidance.md) |
 | Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
 | Logical layers versus physical N-tier deployment | [Traditional layered and N-tier architecture guidance](layered-n-tier-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
