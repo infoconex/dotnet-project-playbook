@@ -20,6 +20,8 @@ The playbook separates normative standards, their governance, architectural deci
 | Optional Application Core, dependency, and C# examples | [Clean Architecture guidance](clean-guidance.md) |
 | Domain-Driven Design and Domain Modeling | [STD-014 — DDD standard](standards/ddd.md#std-014) |
 | Optional strategic/tactical domain modeling and C# examples | [DDD guidance](ddd-guidance.md) |
+| Modular Monolith Architecture | [STD-015 — Modular Monolith Architecture](standards/modular-monolith.md#std-015) |
+| Optional module ownership, contracts, data, and verification examples | [Modular Monolith Architecture guidance](modular-monolith-guidance.md) |
 | Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
 | Logical layers versus physical N-tier deployment | [Traditional layered and N-tier architecture guidance](layered-n-tier-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
