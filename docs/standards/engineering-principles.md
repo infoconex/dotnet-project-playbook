@@ -33,6 +33,8 @@ For a defect, first reproduce the incorrect behavior with a regression test when
 
 SOLID and [business-policy independence](dependency-direction.md#std-011) apply even to small class libraries. [Hexagonal Architecture](hexagonal.md#std-012) is Recommended for meaningful application/adapter boundaries and, when adopted, requires explicit interfaces for identified inbound and outbound ports. [Clean Architecture](clean.md#std-013) is independently Recommended where a protected Application Core adds value; when adopted, the entire logical core's compile-time dependencies must remain inward, regardless of whether Hexagonal Architecture is also chosen. Document simpler alternatives when appropriate. Neither architecture mandates four physical projects: a complex service may benefit from multiple independently compiled layers, while a small pure library may need only the library and its tests.
 
+The [proportionate single-project architecture guide](../single-project-guidance.md) illustrates how a cohesive library or small application can retain logical boundaries and independent tests with one production project, without changing STD-003's Optional status or the applicable Required principles.
+
 New abstractions should serve an actual dependency, extension requirement, or testing seam. Avoid speculative project layers and wrappers; the port-interface expectation applies to **identified ports in an adopted Hexagonal design**, not every class. Test selection and architecture checks must match the concrete project rather than blindly reusing another repository's project graph.
 
 ## Evidence-based technical decisions

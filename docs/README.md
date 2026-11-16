@@ -18,6 +18,7 @@ The playbook separates normative standards, their governance, architectural deci
 | Optional ports, adapters, and C# testing examples | [Hexagonal Architecture guidance](hexagonal-guidance.md) |
 | Clean Architecture | [STD-013 — Clean Architecture](standards/clean.md#std-013) |
 | Optional Application Core, dependency, and C# examples | [Clean Architecture guidance](clean-guidance.md) |
+| Choosing one production project versus multiple projects | [Proportionate single-project architecture guidance](single-project-guidance.md) |
 | Engineering principles | [Engineering principles](standards/engineering-principles.md) |
 | Standards and exceptions process | [Standards governance](governance/standards.md) |
 | Layout, naming, and initial configuration | [Repository organization](governance/repository-organization.md) |
