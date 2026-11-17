@@ -42,13 +42,7 @@ The main improvements concern precise provenance reporting, use of canonical six
 
 This report preserves the original assessment and separately identifies what was confirmed during report preparation. It does not retroactively attribute later observations to the earlier assistant assessment.
 
-The reporting basis is the pinned [manual evaluation procedure](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md?utm_source=chatgpt.com), which explicitly distinguishes AI-behavior evaluation from consumer-project standards assessment.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+The reporting basis is the pinned [manual evaluation procedure](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md), which explicitly distinguishes AI-behavior evaluation from consumer-project standards assessment.
 
 ## **2. Evaluation identity**
 
@@ -74,15 +68,9 @@ GitHub
 | Assessment stopping condition                       | Repository assessment delivered without changes                                      |
 | Evaluation-report stopping condition                | This report, following the user's explicit completion instruction                    |
 
-The immutable target revision was confirmed from the [RecordSift commit record](https://github.com/infoconex/RecordSift/commit/1809d06c0fade59e4769d16e0f8eaf10fa426004?utm_source=chatgpt.com). It records a documentation/workflow update associated with PR #270.
+The immutable target revision was confirmed from the [RecordSift commit record](https://github.com/infoconex/RecordSift/commit/1809d06c0fade59e4769d16e0f8eaf10fa426004). It records a documentation/workflow update associated with PR #270.
 
-The existing [Windows CI run](https://github.com/infoconex/RecordSift/actions/runs/43146607664?utm_source=chatgpt.com) identifies the exact target commit on `main`. This is historical GitHub execution evidence, not a test initiated during this evaluation.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub+1
-
-
+The existing [Windows CI run](https://github.com/infoconex/RecordSift/actions/runs/43146607664) identifies the exact target commit on `main`. This is historical GitHub execution evidence, not a test initiated during this evaluation.
 
 ### **2.1 Sources inspected**
 
@@ -92,38 +80,32 @@ The following distinguishes the original assessment's reported evidence from pri
 
 | Source                                                                                                                                                                                               | Purpose                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [start-here.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md?utm_source=chatgpt.com)                                             | Adoption workflow, discovery rules, phase transitions, authorization |
-| [evaluate-playbook.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md?utm_source=chatgpt.com)                          | Evaluation procedure and report requirements                         |
-| [Standards catalog](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/standards/README.md?utm_source=chatgpt.com)                              | STD-001–STD-022 identifiers, levels, applicability summaries         |
-| [Standards governance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/governance/standards.md?utm_source=chatgpt.com)                       | Required, Recommended, Optional, exceptions                          |
-| [Assessment guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/assessment-guidance.md?utm_source=chatgpt.com)                         | Six assessment outcomes and evidence handling                        |
-| [STD-012](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/standards/hexagonal.md?utm_source=chatgpt.com)                                     | Explicit inbound/outbound port requirements                          |
-| [Build/dependency guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/build-dependency-guidance.md?utm_source=chatgpt.com)             | Traditional project formats and dependency decisions                 |
-| [Platform compatibility guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/platform-compatibility-guidance.md?utm_source=chatgpt.com) | Framework, platform, build, and runtime evidence distinctions        |
-| [Security guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/security-guidance.md?utm_source=chatgpt.com)                             | Proportionate security review                                        |
-| [Evaluation corpus](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluation-corpus.md?utm_source=chatgpt.com)                             | Scenario identity and preflight context                              |
+| [start-here.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md)                                             | Adoption workflow, discovery rules, phase transitions, authorization |
+| [evaluate-playbook.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md)                          | Evaluation procedure and report requirements                         |
+| [Standards catalog](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/standards/README.md)                              | STD-001–STD-022 identifiers, levels, applicability summaries         |
+| [Standards governance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/governance/standards.md)                       | Required, Recommended, Optional, exceptions                          |
+| [Assessment guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/assessment-guidance.md)                         | Six assessment outcomes and evidence handling                        |
+| [STD-012](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/standards/hexagonal.md)                                     | Explicit inbound/outbound port requirements                          |
+| [Build/dependency guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/build-dependency-guidance.md)             | Traditional project formats and dependency decisions                 |
+| [Platform compatibility guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/platform-compatibility-guidance.md) | Framework, platform, build, and runtime evidence distinctions        |
+| [Security guidance](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/security-guidance.md)                             | Proportionate security review                                        |
+| [Evaluation corpus](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluation-corpus.md)                             | Scenario identity and preflight context                              |
 
-The evaluation corpus was consulted only to confirm scenario identity and reporting context. Its preflight observations were **not counted as actions performed by the participant assistant**.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+The evaluation corpus was consulted only to confirm scenario identity and reporting context. Its preflight observations were **not counted as actions performed by the participant assistant**.
 
 **Pinned RecordSift sources directly confirmed during report preparation:**
 
 | Source                                                                                                                                                                                                 | Evidence available                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| [Target commit](https://github.com/infoconex/RecordSift/commit/1809d06c0fade59e4769d16e0f8eaf10fa426004?utm_source=chatgpt.com)                                                                        | Exact revision, documentation-change scope                                         |
-| [README.md](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/README.md?utm_source=chatgpt.com)                                                                    | Library purpose, net48 limitations, public-release provenance, security boundaries |
-| [Domain project](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/src/RecordSift.Domain/RecordSift.Domain.csproj?utm_source=chatgpt.com)                          | Traditional MSBuild format, .NET Framework 4.8, C# 7.3                             |
-| [CSV dependency configuration](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/src/RecordSift.Infrastructure.Csv/packages.config?utm_source=chatgpt.com)         | Legacy NuGet dependency format                                                     |
-| [Domain NUnit test project](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/tests/RecordSift.Domain.Tests/RecordSift.Domain.Tests.csproj?utm_source=chatgpt.com) | Test project configuration                                                         |
-| [.editorconfig](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/.editorconfig?utm_source=chatgpt.com)                                                            | Existing code-style and diagnostic configuration                                   |
-| [Windows CI workflow](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/.github/workflows/windows-net48.yml?utm_source=chatgpt.com)                                | Configured restore, build, tests, package audits, verification                     |
-| [Requirements traceability](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/docs/testing/traceability.md?utm_source=chatgpt.com)                                 | Requirement/scenario evidence relationships                                        |
-| [Exact-commit CI run](https://github.com/infoconex/RecordSift/actions/runs/43146607664?utm_source=chatgpt.com)                                                                                         | Historical successful Windows workflow and two successful jobs                     |
+| [Target commit](https://github.com/infoconex/RecordSift/commit/1809d06c0fade59e4769d16e0f8eaf10fa426004)                                                                        | Exact revision, documentation-change scope                                         |
+| [README.md](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/README.md)                                                                    | Library purpose, net48 limitations, public-release provenance, security boundaries |
+| [Domain project](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/src/RecordSift.Domain/RecordSift.Domain.csproj)                          | Traditional MSBuild format, .NET Framework 4.8, C# 7.3                             |
+| [CSV dependency configuration](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/src/RecordSift.Infrastructure.Csv/packages.config)         | Legacy NuGet dependency format                                                     |
+| [Domain NUnit test project](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/tests/RecordSift.Domain.Tests/RecordSift.Domain.Tests.csproj) | Test project configuration                                                         |
+| [.editorconfig](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/.editorconfig)                                                            | Existing code-style and diagnostic configuration                                   |
+| [Windows CI workflow](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/.github/workflows/windows-net48.yml)                                | Configured restore, build, tests, package audits, verification                     |
+| [Requirements traceability](https://github.com/infoconex/RecordSift/blob/1809d06c0fade59e4769d16e0f8eaf10fa426004/docs/testing/traceability.md)                                 | Requirement/scenario evidence relationships                                        |
+| [Exact-commit CI run](https://github.com/infoconex/RecordSift/actions/runs/43146607664)                                                                                         | Historical successful Windows workflow and two successful jobs                     |
 
 The original assistant assessment also reported inspecting architecture decisions, importer classes and interfaces, adapter tests, historical TDD records, security documentation, release governance, and PR metadata.
 
@@ -165,7 +147,7 @@ The following records the evaluation interaction in its original order.
 **Speaker:** Developer\
 **Message, verbatim:**
 
-> Read and follow [https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md?utm_source=chatgpt.com) and its linked standards at the same commit. Perform a read-only assessment of [https://github.com/infoconex/RecordSift](https://github.com/infoconex/RecordSift?utm_source=chatgpt.com) at commit 1809d06c0fade59e4769d16e0f8eaf10fa426004. Evaluate applicable standards while respecting existing .NET Framework architecture and compatibility constraints. Do not modify anything.
+> Read and follow [https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md) and its linked standards at the same commit. Perform a read-only assessment of [https://github.com/infoconex/RecordSift](https://github.com/infoconex/RecordSift) at commit 1809d06c0fade59e4769d16e0f8eaf10fa426004. Evaluate applicable standards while respecting existing .NET Framework architecture and compatibility constraints. Do not modify anything.
 
 **Observed facts:** The request established the objective, the two immutable revisions, the read-only authorization mode, and the requirement to respect existing architecture and compatibility constraints.
 
@@ -311,13 +293,7 @@ No additional response is attributed to the developer.
 
 **Evaluator judgment:** This is not automatically a defect. The developer supplied a precise assessment objective, an accessible repository, pinned commits, compatibility constraints, and a read-only authorization boundary.
 
-The playbook explicitly directs assistants to skip questions whose answers are already established by the request or available project evidence. It also discourages perfunctory defaults confirmation during assessment-only work.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+The playbook explicitly directs assistants to skip questions whose answers are already established by the request or available project evidence. It also discourages perfunctory defaults confirmation during assessment-only work.
 
 ### **4.2 Appropriate inferences**
 
@@ -385,13 +361,7 @@ These outcomes are separate from verification statuses such as Passed, Failed, S
 
 The evaluation preserves the assistant's original classifications below. Where its wording was not one of the six canonical outcomes, the ambiguity is explicitly identified rather than silently corrected.
 
-The normative levels and applicability conditions come from the pinned standards catalog and governance documents.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub+2
-
-
+The normative levels and applicability conditions come from the pinned standards catalog and governance documents.
 
 ### **5.2 Standards coverage and findings**
 
@@ -445,37 +415,13 @@ STD-019 requires a canonical classification tied to a precise claim. For example
 
 Several original conclusions have direct, pinned corroboration.
 
-**Legacy toolchain and framework.** The Domain project contains traditional MSBuild configuration, `<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>`, and `<LangVersion>7.3</LangVersion>`. The CSV adapter also uses `packages.config`. These observations support the decision not to prescribe an SDK-style conversion or nullable reference types.&#x20;
+**Legacy toolchain and framework.** The Domain project contains traditional MSBuild configuration, `<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>`, and `<LangVersion>7.3</LangVersion>`. The CSV adapter also uses `packages.config`. These observations support the decision not to prescribe an SDK-style conversion or nullable reference types.
 
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+**Testing and CI configuration.** The Windows workflow defines restore, build, test, and additional verification activities. It also includes checks for individual NUnit assembly baselines, contributor-facing test-runner behavior, and selected environmental constraints. Those definitions support the conclusion that a substantial verification process exists.
 
-GitHub+1
+**Existing security limitations.** The pinned README describes untrusted XLSX processing limits, synchronous/eager behavior, and the risk of spreadsheet formula interpretation when diagnostic CSV containing untrusted metadata is opened in spreadsheet software. These are documented security boundaries rather than proof of arbitrary-input safety.
 
-
-
-**Testing and CI configuration.** The Windows workflow defines restore, build, test, and additional verification activities. It also includes checks for individual NUnit assembly baselines, contributor-facing test-runner behavior, and selected environmental constraints. Those definitions support the conclusion that a substantial verification process exists.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
-
-**Existing security limitations.** The pinned README describes untrusted XLSX processing limits, synchronous/eager behavior, and the risk of spreadsheet formula interpretation when diagnostic CSV containing untrusted metadata is opened in spreadsheet software. These are documented security boundaries rather than proof of arbitrary-input safety.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
-
-**Release provenance.** The README distinguishes the published 0.1.0 artifact and its original source commit from later repository documentation revisions. That supports the assistant's recommendation not to equate the evaluated repository commit with the published NuGet package.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+**Release provenance.** The README distinguishes the published 0.1.0 artifact and its original source commit from later repository documentation revisions. That supports the assistant's recommendation not to equate the evaluated repository commit with the published NuGet package.
 
 ### **5.5 Contradictory and limiting evidence**
 
@@ -490,7 +436,7 @@ During preparation of this final evaluation report, read-only inspection identif
 | Field                                      | Observed value                                                                                         |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | Workflow                                   | Windows .NET Framework 4.8 build and test                                                              |
-| Run                                        | [43146607664](https://github.com/infoconex/RecordSift/actions/runs/43146607664?utm_source=chatgpt.com) |
+| Run                                        | [43146607664](https://github.com/infoconex/RecordSift/actions/runs/43146607664) |
 | Commit                                     | `1809d06c0fade59e4769d16e0f8eaf10fa426004`                                                             |
 | Branch                                     | `main`                                                                                                 |
 | Trigger                                    | Push, November 12, 2026                                                                                |
@@ -498,13 +444,7 @@ During preparation of this final evaluation report, read-only inspection identif
 | Windows restore, MSBuild and NUnit job     | Succeeded                                                                                              |
 | Pinned-package and vulnerability-audit job | Succeeded                                                                                              |
 
-GitHub's job pages identify successful completion. However, the available interface did not expose the complete individual step logs without authentication. Thus the run and job statuses are observed, while independent line-by-line review of their execution logs remains unavailable.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub+2
-
-
+GitHub's job pages identify successful completion. However, the available interface did not expose the complete individual step logs without authentication. Thus the run and job statuses are observed, while independent line-by-line review of their execution logs remains unavailable.
 
 **Evaluator judgment:** The earlier statement that exact-commit verification was unconfirmed was too conservative given the available GitHub run record. The original assistant should ideally have looked up this run before finalizing Finding B.
 
@@ -516,13 +456,7 @@ The pinned Hexagonal standard says that when the pattern is adopted, identified 
 
 The original assistant reported explicit outbound reader interfaces but concrete public importer entry points. That creates a meaningful design question, provided those importer operations are indeed intended as inbound ports of an adopted Hexagonal boundary.
 
-The uncertainty is whether RecordSift adopted the full pattern or deliberately adopted a narrower boundary design. No reviewed exception or authoritative architectural clarification was established in this interaction.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+The uncertainty is whether RecordSift adopted the full pattern or deliberately adopted a narrower boundary design. No reviewed exception or authoritative architectural clarification was established in this interaction.
 
 **Evaluator judgment:** The assistant appropriately avoided declaring an unconditional Required violation. The reported Partially satisfied outcome is reasonable as a scoped, provisional interpretation; the adoption decision is still important to resolve before recommending public API changes.
 
@@ -552,13 +486,7 @@ The following are legitimate scope exclusions or justified architectural alterna
 - **STD-014 through STD-018:** No sufficient business-domain, modular-deployment, vertical-slice, microservice, or event-processing need was demonstrated.
 - **STD-012 and STD-013:** Recommended architecture must be applied according to actual boundaries and explicitly chosen alternatives, rather than imposed by name.
 
-These exclusions are supported by the playbook's conditional-applicability model, which specifically recognizes traditional .NET Framework projects and avoids unnecessary architecture mandates.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub+1
-
-
+These exclusions are supported by the playbook's conditional-applicability model, which specifically recognizes traditional .NET Framework projects and avoids unnecessary architecture mandates.
 
 ## **6. Actual final repository assessment**
 
@@ -768,13 +696,7 @@ This is one observed interaction with one model and one repository. It does not 
 - Successful generated project compilation.
 - Universal compliance with all registered standards.
 
-The playbook's evaluation procedure expressly distinguishes conversational evidence from unexecuted tooling and broader provider claims.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub
-
-
+The playbook's evaluation procedure expressly distinguishes conversational evidence from unexecuted tooling and broader provider claims.
 
 ## **9. Playbook improvement recommendations**
 

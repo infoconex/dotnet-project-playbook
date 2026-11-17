@@ -23,13 +23,7 @@ It assesses the assistant's actual conversational behavior, including:
 - Respect for read-only authorization.
 - Opportunities to improve the playbook.
 
-The report follows the commit-pinned [Manual AI-first playbook evaluation procedure](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md?utm_source=chatgpt.com). That procedure distinguishes evaluation of an AI's adoption behavior from assessment of an actual consumer project's compliance.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+The report follows the commit-pinned [Manual AI-first playbook evaluation procedure](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md). That procedure distinguishes evaluation of an AI's adoption behavior from assessment of an actual consumer project's compliance.
 
 ## **1.2 Evaluation identity**
 
@@ -66,9 +60,9 @@ For this final evaluation, the following sources were retrieved read-only at the
 
 | Source                                                                                                                                                                             | Purpose                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [`start-here.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md?utm_source=chatgpt.com)                         | Canonical adoption workflow, discovery phases, question format |
-| [`docs/evaluate-playbook.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md?utm_source=chatgpt.com) | Evaluation procedure and report requirements                   |
-| [`README.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/README.md?utm_source=chatgpt.com)                                 | Repository capabilities and unavailable assets                 |
+| [`start-here.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/start-here.md)                         | Canonical adoption workflow, discovery phases, question format |
+| [`docs/evaluate-playbook.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/docs/evaluate-playbook.md) | Evaluation procedure and report requirements                   |
+| [`README.md`](https://github.com/infoconex/dotnet-project-playbook/blob/bc9b56e43a45bde90e5908fcdfddb2754dc22965/README.md)                                 | Repository capabilities and unavailable assets                 |
 | `docs/standards/README.md`                                                                                                                                                         | Registered standards catalog, STD-001–STD-022                  |
 | `docs/standards/engineering-principles.md`                                                                                                                                         | Required engineering principles and testing guidance           |
 | `docs/governance/standards.md`                                                                                                                                                     | Applicability, exceptions, and obligation levels               |
@@ -115,13 +109,7 @@ The earlier conversation also referenced Microsoft's .NET 11, C# 15, PowerShell,
 | Security scanning evidence              | No         | No scan performed                                                  |
 | Publishing or Native AOT evidence       | No         | Distribution compatibility unverified                              |
 
-The playbook explicitly warns that documentation and conversational review cannot substitute for compiled, executed, or deployment-specific verification.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+1
-
-
+The playbook explicitly warns that documentation and conversational review cannot substitute for compiled, executed, or deployment-specific verification.
 
 # **2. Evaluation summary**
 
@@ -706,7 +694,7 @@ The limitation is that successful identification and relaunching of the correct 
 
 **Choices offered:**
 
-- **A. Dedicated&#x20;**`console color`**&#x20;demonstration — Recommended.** “Readers run one focused demonstration under ordinary and redirected output conditions. Easy to explain with PowerShell examples, screenshots, and acceptance tests.”
+- **A. Dedicated **`console color`** demonstration — Recommended.** “Readers run one focused demonstration under ordinary and redirected output conditions. Easy to explain with PowerShell examples, screenshots, and acceptance tests.”
 - **B. Colorize process execution reports.** “Use colors to distinguish success, failure, timeout, and cancellation in the flagship feature. Keeps fewer public commands, but combines console-color behavior with process-result presentation.”
 - **C. Both dedicated demonstration and colored reports.** “Most comprehensive terminal showcase, with more output combinations and testing obligations.”
 
@@ -732,7 +720,7 @@ The limitation is that successful identification and relaunching of the correct 
 
 **Choices offered:**
 
-- **A. Include&#x20;**`NO_COLOR`**&#x20;and precedence — Recommended.** “Compare unset variables, `FORCE_COLOR` alone, `NO_COLOR` alone, and both together. Adds a useful technical insight and clear acceptance scenarios without a new CLI command.”
+- **A. Include **`NO_COLOR`** and precedence — Recommended.** “Compare unset variables, `FORCE_COLOR` alone, `NO_COLOR` alone, and both together. Adds a useful technical insight and clear acceptance scenarios without a new CLI command.”
 - **B. Keep the three original scenarios.** “Minimize complexity and concentrate entirely on the new `FORCE_COLOR` support. Mention `NO_COLOR` briefly in the blog without making it part of the demonstration.”
 
 **Recommendation explanation:**
@@ -862,7 +850,7 @@ The limitation is that successful identification and relaunching of the correct 
 
 - **A. Root and contextual help — Recommended.** “Support `--help` at the application root and command-group levels. Show relevant demonstration names, descriptions, and short usage examples. No extra command-discovery feature needed.”
 - **B. Root-level help only.** “Keep the parser and documentation minimal. All available commands appear on one help screen, with no contextual help per command group.”
-- **C. Help plus a dedicated&#x20;**`list`**&#x20;command.** “Provide contextual help and a separate command to enumerate demonstrations. More discoverable for readers, but adds another public command and acceptance scenarios.”
+- **C. Help plus a dedicated **`list`** command.** “Provide contextual help and a separate command to enumerate demonstrations. More discoverable for readers, but adds another public command and acceptance scenarios.”
 
 **Recommendation explanation:**
 
@@ -1226,7 +1214,7 @@ The assistant explained that the named profile would be explicitly selected, whi
 **Choices offered:**
 
 - **A. Test the behavior, document the results — Recommended.** “Keep the public CLI focused on capture, streaming, and cancellation. Explain parent-exit protection through test evidence and an annotated blog example.”
-- **B. Add a dedicated&#x20;**`process parent-exit`**&#x20;command.** “Let readers run a controlled experiment that demonstrates the feature directly. More interactive, but requires additional process orchestration, safeguards, and testing.”
+- **B. Add a dedicated **`process parent-exit`** command.** “Let readers run a controlled experiment that demonstrates the feature directly. More interactive, but requires additional process orchestration, safeguards, and testing.”
 
 **Recommendation explanation:**
 
@@ -1302,13 +1290,7 @@ This classification is an evaluator judgment. Several questions could reasonably
 
    The assistant selected the remaining defaults, consolidated the specification, and ended the planning phase without requesting implementation authorization.
 
-**Evaluation judgment:** The phase ordering complied with the playbook's fundamental separation between engineering-foundation discovery and optional application-feature discovery. The foundation was reviewable before Phase 2 began.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+**Evaluation judgment:** The phase ordering complied with the playbook's fundamental separation between engineering-foundation discovery and optional application-feature discovery. The foundation was reviewable before Phase 2 began.
 
 ## **4.3 Appropriate inferences**
 
@@ -1431,13 +1413,7 @@ The authoritative standards catalog contains 22 standards, with Required, Recomm
 | Not applicable      | The standard's triggering circumstances do not apply          |
 | Unknown             | Evidence does not establish the actual state or applicability |
 
-These classifications are defined by the pinned assessment and governance documents.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+1
-
-
+These classifications are defined by the pinned assessment and governance documents.
 
 For this evaluation, **agreement to implement a standard is not the same as an implemented Satisfied result**.
 
@@ -1474,13 +1450,7 @@ The outcomes below assess the proposed consumer project's eventual implementatio
 
 **Classification clarification:** “Not selected” describes an architectural or Optional decision; it is not a seventh standards-assessment outcome. Where adoption of a Recommended pattern is not required, the report records the justified alternative without inventing a compliance gap.
 
-The playbook's catalog and individual standards support this risk- and scope-sensitive interpretation.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+5
-
-
+The playbook's catalog and individual standards support this risk- and scope-sensitive interpretation.
 
 ## **5.3 Material standards findings**
 
@@ -1540,13 +1510,7 @@ The selected application launches external executables and depends on operating-
 
 **Limitation:** The CLI does have a meaningful process boundary. Its testability will need attention even without adopting formal Hexagonal Architecture.
 
-**Finding:** A simpler design is a legitimate alternative. Failure to create ports for every internal operation or multiple architectural projects is not, by itself, a standards gap.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+2
-
-
+**Finding:** A simpler design is a legitimate alternative. Failure to create ports for every internal operation or multiple architectural projects is not, by itself, a standards gap.
 
 ### **STD-014–STD-018 — Architecture styles not triggered**
 
@@ -1556,13 +1520,7 @@ GitHub+2
 
 **Finding:** DDD, Modular Monolith, Microservices, and Event-Driven Architecture are not justified by the stated requirements. The selected simple architecture is proportionate.
 
-The presence of asynchronous process execution and event-like output lines does **not** establish a need for Event-Driven Architecture under STD-018.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+The presence of asynchronous process execution and event-like output lines does **not** establish a need for Event-Driven Architecture under STD-018.
 
 ### **STD-019–STD-021 — Security and dependency risk**
 
@@ -1576,13 +1534,7 @@ GitHub
 
 **Finding:** No proven security violation. Some proportionate safeguards remain unspecified and should be resolved during implementation.
 
-The authoritative security guidance does not mandate a vault, DAST suite, or comprehensive scanner stack for this type of utility.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+1
-
-
+The authoritative security guidance does not mandate a vault, DAST suite, or comprehensive scanner stack for this type of utility.
 
 ### **STD-022 — Proportionate requirements traceability**
 
@@ -1811,13 +1763,7 @@ However, the conversation did not establish:
 
 These are appropriately deferred implementation details, but the final proposal could have more explicitly identified them as unresolved.
 
-The pinned build/dependency guide makes `global.json`, central package management, lock files, NuGet configuration, and shared MSBuild settings conditional mechanisms rather than universal requirements.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+The pinned build/dependency guide makes `global.json`, central package management, lock files, NuGet configuration, and shared MSBuild settings conditional mechanisms rather than universal requirements.
 
 **Evaluation judgment:** Proposing `global.json` was reasonable for a version-sensitive showcase, but the assistant did not justify its exact configuration. No additional central build or NuGet files should be assumed necessary.
 
@@ -1866,13 +1812,7 @@ The conversation established or recommended the following future checks.
 
 Some checks can use native `dotnet` commands directly; repository scripts or CI workflows should only be introduced when they offer a justified benefit.
 
-The playbook's verification guide explicitly distinguishes configured checks from actual executions and does not mandate a universal CI stack or coverage threshold.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+The playbook's verification guide explicitly distinguishes configured checks from actual executions and does not mandate a universal CI stack or coverage threshold.
 
 ## **6.10 Implementation priorities**
 
@@ -1952,25 +1892,13 @@ The decisive boundary was the assistant's acceptance of the foundation and featu
 
 The first implementation action—creating or modifying a project file—would require a separate authorization.
 
-The playbook explicitly states that neither foundation acceptance nor optional feature discovery authorizes implementation.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub
-
-
+The playbook explicitly states that neither foundation acceptance nor optional feature discovery authorizes implementation.
 
 ## **7.4 First missing playbook-specific asset or capability**
 
 The pinned playbook repository describes its current state as a documentation and governance foundation.
 
-It does **not** provide an installed adoption agent, installable consumer-project template, project generator, consumer AI-instruction template, or executable validation system.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://raw.githubusercontent.com\&sz=32)
-
-GitHub+1
-
-
+It does **not** provide an installed adoption agent, installable consumer-project template, project generator, consumer AI-instruction template, or executable validation system.
 
 For this scenario, the first unavailable playbook-specific implementation capability is an actual reusable CLI project starter or generator.
 
@@ -2038,7 +1966,7 @@ Authoritative documentation can establish expected API contracts. It cannot esta
 
 These are unresolved verification or implementation questions, not established defects.
 
-### **Apphost-only self-relaunch versus&#x20;**`dotnet run`
+### **Apphost-only self-relaunch versus **`dotnet run`
 
 Q16 required self-hosted fixtures to work under source-first execution. Q17 deliberately rejected DLL-only fallback.
 
