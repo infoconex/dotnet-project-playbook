@@ -1,5 +1,17 @@
 # Issue #12 — read-only AI conversational evaluation corpus
 
+## Observed conversational results — November 16, 2026
+
+After the scenario preflight below, the developer submitted three self-contained ChatGPT evaluations pinned to playbook revision `bc9b56e43a45bde90e5908fcdfddb2754dc22965`. This supersedes the **Not executed** preparation status and case-specific placeholders below, which are retained as a dated historical record of the preflight (not as current evaluation status).
+
+| Case | Retained evidence | Observed conversation | Main qualification |
+| --- | --- | --- | --- |
+| A — new-project foundation | [Full submitted report](evaluations/case-a-new-project.md) | 40 questions; foundation accepted, optional feature discovery opted into | Significant over-questioning; no generated/compiled application |
+| B — modern SDK-style repository | [Condensed retained report](evaluations/case-b-modern-dotnet.md) | Zero questions; 22-standard read-only assessment | Original retrieval payloads unavailable; retained document is condensed, not verbatim |
+| C — traditional .NET Framework | [Full submitted report](evaluations/case-c-recordsift.md) | Zero questions; legacy-sensitive read-only assessment | Later evaluator found an exact-target successful Windows CI run missed in original assessment |
+
+The reports describe temporary, unpersonalized interactions, but independent confirmation of session initialization is unavailable. A/C preserve the original supplied text including exported UI/citation artifacts; B preserves chronological events and findings in condensed form. The evaluations demonstrate reported conversational behavior and legitimate **Not applicable** outcomes. They do not demonstrate compilation, project generation, new CI execution, exhaustive security verification, or cross-provider consistency. Retrospective corrections are not misrepresented as observations by the original participant assistant.
+
 These are **three participant scenario protocols and a read-only source-inspection preflight**, not three completed conversational evaluations. The [evaluation procedure](evaluate-playbook.md) owns the actual chronological log requirements and stopping conditions. The [start-here guide](../start-here.md) owns the adoption conversation; the [assessment guide](assessment-guidance.md) owns finding/result semantics. Do not paste evaluator expectations into an AI participant's initial prompt.
 
 **Preparation status (November 16, 2026):** Scenario protocols prepared. Public reference-source files and CI run/job metadata were inspected read-only during engineering kickoff. The available authoring session was the same personalized Issue #12 engineering conversation, not three independent fresh participant conversations with actual developer responses. **No fresh unpersonalized AI conversations were executed for Issue #12**, so there are no participant questions, choice cards, developer responses, phase transitions, final proposals or AI-behavior judgments to report. The three conversational evaluations and their chronological logs remain **Not executed / acceptance pending**. This preflight is documentation review, not an executable test or successful simulated evaluation.

@@ -48,6 +48,10 @@ Use the [verification guide](verification-guidance.md) to distinguish **Passed, 
 
 For each material finding, record **supporting evidence** separately from **contradictory evidence** and **limitations**. Prefer links to files at immutable revisions, issues, review decisions, test cases, and CI runs over copied mutable status. If a target SHA cannot be resolved, identify the moving ref, retrieval date, method attempted, and conclusions relying on unpinned material. Cite only observations actually inspected; missing access is not a failed check.
 
+**Execution provenance:** When a check matters to an assessment, distinguish the requested repository revision, the revision of inspected source, the SHA attached to any CI run, the particular jobs or steps recorded as successful, and unavailable logs. Look for existing commit-linked run/job results before concluding that exact-revision execution is unknown. A historical PR-candidate run does not automatically establish execution of its later squash commit; equally, an available exact-commit CI result should not be overlooked. Source, configured workflow, historical executed check, independently reproduced execution, and administrator-only setting are useful *evidence descriptions*, not extra assessment outcomes.
+
+**Composite findings:** Use one of the six canonical outcomes for each reported obligation, then qualify its scope. If a standard covers separable protections, identify which were observed and which remain unknown or unmet. Avoid vague mixtures such as “partially evidenced, broader coverage unknown” as a substitute for a defined outcome. An absent configuration or unavailable audit is a limitation, not automatically contradictory evidence.
+
 ## Human-readable assessment report
 
 Start with a compact report; expand fields when consequences or conflicting evidence warrant it. This is a **shape**, not a mandatory machine-readable schema or universal table of every standard.
