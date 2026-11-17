@@ -8,7 +8,7 @@ The longer-term direction is to consolidate this .NET-specific foundation into a
 
 ## Current state
 
-**Documentation and governance foundation with an initial standards catalog.** The current foundation provides governing principles, a small indexed set of approved engineering standards, contribution guidance, and a planned AI-assisted adoption and template architecture. The catalog is not yet comprehensive. No interactive adoption agent, consumer-project AI instruction template, installable .NET project template, automated documentation validator, or bootstrap command is available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) establishes the foundation; subsequent issues will deliver detailed standards, usable assets, and acceptance tests.
+**Documentation and governance foundation with 22 registered engineering standards (STD-001–STD-022).** The current foundation provides governing principles, authoritative engineering standards, contribution guidance, a provider-neutral conversational adoption process, and planned reusable assets and template architecture. The catalog is not an exhaustive universal checklist. No installed adoption or assessment agent, consumer-project AI instruction template, installable .NET project template, automated documentation validator, or bootstrap command is available yet. [Issue #1](https://github.com/infoconex/dotnet-project-playbook/issues/1) established the foundation; [Issue #12](https://github.com/infoconex/dotnet-project-playbook/issues/12) develops the AI-guided assessment/reporting contract without implementing an agent or generator.
 
 **Licensing:** This repository is public, but no redistribution license has been selected. Public visibility alone does not grant permission to reuse or redistribute its contents. See the [licensing decision](docs/governance/repository-organization.md#licensing-decision) before adopting or distributing playbook assets.
 
@@ -17,6 +17,7 @@ The longer-term direction is to consolidate this .NET-specific foundation into a
 | Topic | Start here |
 | --- | --- |
 | Begin AI-guided project setup or assessment | [Start here](start-here.md) |
+| Assessment outcomes, evidence and recommendation reports | [AI-guided assessment](docs/assessment-guidance.md) |
 | Browse registered engineering standards | [Standards catalog](docs/standards/README.md) |
 | Approved engineering principles | [Engineering principles](docs/standards/engineering-principles.md) |
 | How standards are authored and changed | [Standards governance](docs/governance/standards.md) |
