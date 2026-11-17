@@ -56,3 +56,20 @@ The following protocols were written **before** the participant conversations. T
 All three cases now have complete user-supplied conversational evaluation reports. The **reported conversational coverage** is complete at the level of retained records; fresh-session isolation and unavailable original retrieval payloads cannot be independently established. Their inability to write files from Temporary Chats was an evidence-transfer limitation, resolved by copying the reports into the authorized persistent engineering conversation. This corpus supplies neither independent executed verification nor evidence that every future AI model follows the contract.
 
 For future repetitions, preserve full actual interaction records, the playbook and target SHAs, model/client, options and responses (if any), phase transitions, stopping behavior, and evidence limits. Keep AI-behavior evaluations separate from consumer standards assessments and avoid replacing actual transcripts with an idealized scenario.
+
+## Follow-up Case D — section review and revision (Not yet executed)
+
+**Purpose:** Test the subsequently approved [section-based discovery and review](../start-here.md#review-each-discovery-section-before-continuing) experience. This is a **prospective targeted conversational evaluation**, not a fourth completed run or an amendment to the three historical reports. Pin the revised playbook commit **at execution time** and record it; do not claim that the initial three conversations used instructions added afterward.
+
+**Participant opening objective:** "I want to plan a new .NET application using the pinned .NET Project Playbook. I have not decided all its engineering requirements. Follow the start-here workflow, and remain read-only." Supply the actual immutable playbook link at the time of evaluation. Do not include the evaluator's expected navigation or revision steps in the participant's opening prompt.
+
+**Evaluator observations (not participant instructions):**
+
+1. Does the assistant adapt sections to meaningful project decisions rather than impose a fixed sequence or question count?
+2. Before advancing, does it summarize accepted choices, defaults, assumptions and important unknowns and offer functional **Accept and continue**, **Adjust a decision**, and **Add something missing** responses where the client supports them?
+3. Does the developer have a natural opportunity to change an earlier decision? Record whether a genuine change arose and its actual effects; do **not** force an artificial revision if the conversation does not call for one. If no revision occurs, label that behavior untested and consider a distinct focused case.
+4. Does the assistant explain and reconcile affected downstream recommendations while retaining unrelated accepted decisions, and return to the affected section's review?
+5. Does it offer a final consolidated, navigable summary after the chosen discovery phases, with a separate implementation authorization boundary?
+6. Does the assistant avoid irrelevant review interruptions for trivial details or an assessment-only request?
+
+**Actual interaction and results:** **Not executed.** No questions, options, user responses, changed decisions, observed section navigation, generated files, or verification runs are claimed. To complete this follow-up, run a genuine fresh read-only conversation and preserve its full chronological report using the [evaluation procedure](evaluate-playbook.md#evaluation-report-requirements).
